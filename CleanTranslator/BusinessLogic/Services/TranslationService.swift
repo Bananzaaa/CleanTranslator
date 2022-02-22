@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TranslationService: AnyObject {
-    
+    func translate(with request: TranslationRequest) -> Progress
 }
 
 final class MainTranslationService: APIService, TranslationService {

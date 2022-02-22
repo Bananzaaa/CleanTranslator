@@ -32,6 +32,29 @@
 		8CD1C88427C29EF6000E7CC0 /* TranslationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1C88327C29EF6000E7CC0 /* TranslationModel.swift */; };
 		8CD1C88627C29FE2000E7CC0 /* LaguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1C88527C29FE2000E7CC0 /* LaguageModel.swift */; };
 		8CD1C88927C2A63B000E7CC0 /* TranslationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1C88827C2A63B000E7CC0 /* TranslationRequest.swift */; };
+		8CD1C88F27C2B757000E7CC0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1C88E27C2B757000E7CC0 /* Coordinator.swift */; };
+		8CD1C89127C2B821000E7CC0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1C89027C2B821000E7CC0 /* AppCoordinator.swift */; };
+		8CD1CAF727C4B181000E7CC0 /* TranslationScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAE627C4B181000E7CC0 /* TranslationScreenPresenter.swift */; };
+		8CD1CAF827C4B181000E7CC0 /* TranslationScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAE827C4B181000E7CC0 /* TranslationScreenModels.swift */; };
+		8CD1CAF927C4B181000E7CC0 /* TranslationScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAE927C4B181000E7CC0 /* TranslationScreenCoordinator.swift */; };
+		8CD1CAFA27C4B181000E7CC0 /* TranslationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAEB27C4B181000E7CC0 /* TranslationScreenViewController.swift */; };
+		8CD1CAFB27C4B181000E7CC0 /* TranslationScreenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAED27C4B181000E7CC0 /* TranslationScreenWorker.swift */; };
+		8CD1CAFC27C4B181000E7CC0 /* TranslationScreenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAEE27C4B181000E7CC0 /* TranslationScreenDataStore.swift */; };
+		8CD1CAFE27C4B181000E7CC0 /* TranslationScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAF127C4B181000E7CC0 /* TranslationScreenView.swift */; };
+		8CD1CAFF27C4B181000E7CC0 /* TranslationScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAF327C4B181000E7CC0 /* TranslationScreenInteractor.swift */; };
+		8CD1CB0027C4B181000E7CC0 /* TranslationScreenModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAF527C4B181000E7CC0 /* TranslationScreenModuleFactory.swift */; };
+		8CD1CB0127C4B181000E7CC0 /* TranslationScreenCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CAF627C4B181000E7CC0 /* TranslationScreenCoordinatorFactory.swift */; };
+		8CD1CB1527C4B192000E7CC0 /* LanguageListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0427C4B192000E7CC0 /* LanguageListScreenPresenter.swift */; };
+		8CD1CB1627C4B192000E7CC0 /* LanguageListScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0627C4B192000E7CC0 /* LanguageListScreenModels.swift */; };
+		8CD1CB1727C4B192000E7CC0 /* LanguageListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0827C4B192000E7CC0 /* LanguageListScreenViewController.swift */; };
+		8CD1CB1827C4B192000E7CC0 /* LanguageListScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */; };
+		8CD1CB1927C4B192000E7CC0 /* LanguageListScreenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */; };
+		8CD1CB1A27C4B192000E7CC0 /* LanguageListScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0C27C4B192000E7CC0 /* LanguageListScreenService.swift */; };
+		8CD1CB1B27C4B192000E7CC0 /* LanguageListScreenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0D27C4B192000E7CC0 /* LanguageListScreenDataStore.swift */; };
+		8CD1CB1C27C4B192000E7CC0 /* LanguageListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0F27C4B192000E7CC0 /* LanguageListScreenView.swift */; };
+		8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */; };
+		8CD1CB1E27C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1327C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift */; };
+		8CD1CB1F27C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */; };
 		CB3CB3CC6B73571E56D549D5 /* Pods_CleanTranslatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBBE12E6E99192F3111C923B /* Pods_CleanTranslatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +108,29 @@
 		8CD1C88327C29EF6000E7CC0 /* TranslationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationModel.swift; sourceTree = "<group>"; };
 		8CD1C88527C29FE2000E7CC0 /* LaguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaguageModel.swift; sourceTree = "<group>"; };
 		8CD1C88827C2A63B000E7CC0 /* TranslationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationRequest.swift; sourceTree = "<group>"; };
+		8CD1C88E27C2B757000E7CC0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8CD1C89027C2B821000E7CC0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8CD1CAE627C4B181000E7CC0 /* TranslationScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenPresenter.swift; sourceTree = "<group>"; };
+		8CD1CAE827C4B181000E7CC0 /* TranslationScreenModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenModels.swift; sourceTree = "<group>"; };
+		8CD1CAE927C4B181000E7CC0 /* TranslationScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenCoordinator.swift; sourceTree = "<group>"; };
+		8CD1CAEB27C4B181000E7CC0 /* TranslationScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenViewController.swift; sourceTree = "<group>"; };
+		8CD1CAED27C4B181000E7CC0 /* TranslationScreenWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenWorker.swift; sourceTree = "<group>"; };
+		8CD1CAEE27C4B181000E7CC0 /* TranslationScreenDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenDataStore.swift; sourceTree = "<group>"; };
+		8CD1CAF127C4B181000E7CC0 /* TranslationScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenView.swift; sourceTree = "<group>"; };
+		8CD1CAF327C4B181000E7CC0 /* TranslationScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenInteractor.swift; sourceTree = "<group>"; };
+		8CD1CAF527C4B181000E7CC0 /* TranslationScreenModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenModuleFactory.swift; sourceTree = "<group>"; };
+		8CD1CAF627C4B181000E7CC0 /* TranslationScreenCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8CD1CB0427C4B192000E7CC0 /* LanguageListScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenPresenter.swift; sourceTree = "<group>"; };
+		8CD1CB0627C4B192000E7CC0 /* LanguageListScreenModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenModels.swift; sourceTree = "<group>"; };
+		8CD1CB0827C4B192000E7CC0 /* LanguageListScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenViewController.swift; sourceTree = "<group>"; };
+		8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenCoordinator.swift; sourceTree = "<group>"; };
+		8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenWorker.swift; sourceTree = "<group>"; };
+		8CD1CB0C27C4B192000E7CC0 /* LanguageListScreenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenService.swift; sourceTree = "<group>"; };
+		8CD1CB0D27C4B192000E7CC0 /* LanguageListScreenDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenDataStore.swift; sourceTree = "<group>"; };
+		8CD1CB0F27C4B192000E7CC0 /* LanguageListScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenView.swift; sourceTree = "<group>"; };
+		8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenInteractor.swift; sourceTree = "<group>"; };
+		8CD1CB1327C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenModuleFactory.swift; sourceTree = "<group>"; };
 		9328D7829D4AB6DE484F2137 /* Pods_CleanTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBBE12E6E99192F3111C923B /* Pods_CleanTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5E51796DADB01C90C0CA289 /* Pods_CleanTranslator_CleanTranslatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslator_CleanTranslatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +202,11 @@
 			children = (
 				8CC5CF7327BAC3E900F60301 /* AppDelegate.swift */,
 				8CC5CF7527BAC3E900F60301 /* SceneDelegate.swift */,
+				8CD1C89027C2B821000E7CC0 /* AppCoordinator.swift */,
 				8CC5CF7727BAC3E900F60301 /* ViewController.swift */,
+				8CD1C88E27C2B757000E7CC0 /* Coordinator.swift */,
+				8CD1CB0227C4B192000E7CC0 /* LanguageListScreen */,
+				8CD1CAE427C4B181000E7CC0 /* TranslationScreen */,
 				8CC5CFAE27BAE86A00F60301 /* BusinessLogic */,
 				8CC5CF7C27BAC3EA00F60301 /* Assets.xcassets */,
 				8CC5CF7E27BAC3EA00F60301 /* LaunchScreen.storyboard */,
@@ -250,6 +300,153 @@
 				8CD1C88827C2A63B000E7CC0 /* TranslationRequest.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8CD1CAE427C4B181000E7CC0 /* TranslationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAE927C4B181000E7CC0 /* TranslationScreenCoordinator.swift */,
+				8CD1CAF427C4B181000E7CC0 /* Factory */,
+				8CD1CAE727C4B181000E7CC0 /* Models */,
+				8CD1CAF227C4B181000E7CC0 /* Interactor */,
+				8CD1CAE527C4B181000E7CC0 /* Presenter */,
+				8CD1CAEA27C4B181000E7CC0 /* ViewControllers */,
+				8CD1CAF027C4B181000E7CC0 /* Views */,
+				8CD1CAEC27C4B181000E7CC0 /* Worker */,
+			);
+			path = TranslationScreen;
+			sourceTree = "<group>";
+		};
+		8CD1CAE527C4B181000E7CC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAE627C4B181000E7CC0 /* TranslationScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CD1CAE727C4B181000E7CC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAE827C4B181000E7CC0 /* TranslationScreenModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CD1CAEA27C4B181000E7CC0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAEB27C4B181000E7CC0 /* TranslationScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8CD1CAEC27C4B181000E7CC0 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAED27C4B181000E7CC0 /* TranslationScreenWorker.swift */,
+				8CD1CAEE27C4B181000E7CC0 /* TranslationScreenDataStore.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		8CD1CAF027C4B181000E7CC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAF127C4B181000E7CC0 /* TranslationScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CD1CAF227C4B181000E7CC0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAF327C4B181000E7CC0 /* TranslationScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8CD1CAF427C4B181000E7CC0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CAF527C4B181000E7CC0 /* TranslationScreenModuleFactory.swift */,
+				8CD1CAF627C4B181000E7CC0 /* TranslationScreenCoordinatorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		8CD1CB0227C4B192000E7CC0 /* LanguageListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB0327C4B192000E7CC0 /* Presenter */,
+				8CD1CB0527C4B192000E7CC0 /* Models */,
+				8CD1CB0727C4B192000E7CC0 /* ViewControllers */,
+				8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */,
+				8CD1CB0A27C4B192000E7CC0 /* Worker */,
+				8CD1CB0E27C4B192000E7CC0 /* Views */,
+				8CD1CB1027C4B192000E7CC0 /* Interactor */,
+				8CD1CB1227C4B192000E7CC0 /* Factory */,
+			);
+			path = LanguageListScreen;
+			sourceTree = "<group>";
+		};
+		8CD1CB0327C4B192000E7CC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB0427C4B192000E7CC0 /* LanguageListScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8CD1CB0527C4B192000E7CC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB0627C4B192000E7CC0 /* LanguageListScreenModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CD1CB0727C4B192000E7CC0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB0827C4B192000E7CC0 /* LanguageListScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8CD1CB0A27C4B192000E7CC0 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */,
+				8CD1CB0C27C4B192000E7CC0 /* LanguageListScreenService.swift */,
+				8CD1CB0D27C4B192000E7CC0 /* LanguageListScreenDataStore.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		8CD1CB0E27C4B192000E7CC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB0F27C4B192000E7CC0 /* LanguageListScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CD1CB1027C4B192000E7CC0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8CD1CB1227C4B192000E7CC0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8CD1CB1327C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift */,
+				8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		C75F165E59F77263E38860B7 /* Pods */ = {
@@ -505,20 +702,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC5CF7827BAC3E900F60301 /* ViewController.swift in Sources */,
+				8CD1CB1727C4B192000E7CC0 /* LanguageListScreenViewController.swift in Sources */,
+				8CD1CAFC27C4B181000E7CC0 /* TranslationScreenDataStore.swift in Sources */,
+				8CD1CAFE27C4B181000E7CC0 /* TranslationScreenView.swift in Sources */,
+				8CD1CB1827C4B192000E7CC0 /* LanguageListScreenCoordinator.swift in Sources */,
 				8CD1C88927C2A63B000E7CC0 /* TranslationRequest.swift in Sources */,
 				8CD1C88427C29EF6000E7CC0 /* TranslationModel.swift in Sources */,
 				8CD1C87627C288AE000E7CC0 /* HTTPError.swift in Sources */,
+				8CD1CB1927C4B192000E7CC0 /* LanguageListScreenWorker.swift in Sources */,
 				8CD1C86E27C285CB000E7CC0 /* APIService.swift in Sources */,
+				8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */,
+				8CD1CB1C27C4B192000E7CC0 /* LanguageListScreenView.swift in Sources */,
 				8CC5CF7427BAC3E900F60301 /* AppDelegate.swift in Sources */,
 				8CD1C88627C29FE2000E7CC0 /* LaguageModel.swift in Sources */,
 				8CD1C87A27C2915B000E7CC0 /* LanguageListEndpoint.swift in Sources */,
+				8CD1CAF727C4B181000E7CC0 /* TranslationScreenPresenter.swift in Sources */,
+				8CD1CB1F27C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift in Sources */,
+				8CD1CAFA27C4B181000E7CC0 /* TranslationScreenViewController.swift in Sources */,
+				8CD1C88F27C2B757000E7CC0 /* Coordinator.swift in Sources */,
+				8CD1CAF927C4B181000E7CC0 /* TranslationScreenCoordinator.swift in Sources */,
 				8CC5CFAA27BAD77B00F60301 /* RequestInterceptor.swift in Sources */,
+				8CD1CAF827C4B181000E7CC0 /* TranslationScreenModels.swift in Sources */,
 				8CD1C87027C28701000E7CC0 /* TranslationEndpoint.swift in Sources */,
 				8CD1C87427C28872000E7CC0 /* ResponseValidator.swift in Sources */,
+				8CD1CB0027C4B181000E7CC0 /* TranslationScreenModuleFactory.swift in Sources */,
+				8CD1CAFF27C4B181000E7CC0 /* TranslationScreenInteractor.swift in Sources */,
+				8CD1CB1E27C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift in Sources */,
+				8CD1CB1527C4B192000E7CC0 /* LanguageListScreenPresenter.swift in Sources */,
+				8CD1CB1B27C4B192000E7CC0 /* LanguageListScreenDataStore.swift in Sources */,
+				8CD1CB0127C4B181000E7CC0 /* TranslationScreenCoordinatorFactory.swift in Sources */,
 				8CC5CF7627BAC3E900F60301 /* SceneDelegate.swift in Sources */,
+				8CD1CAFB27C4B181000E7CC0 /* TranslationScreenWorker.swift in Sources */,
 				8CD1C87E27C298FE000E7CC0 /* Codable+Extensions.swift in Sources */,
 				8CC5CFA427BACE2A00F60301 /* ServiceLayer.swift in Sources */,
+				8CD1C89127C2B821000E7CC0 /* AppCoordinator.swift in Sources */,
+				8CD1CB1A27C4B192000E7CC0 /* LanguageListScreenService.swift in Sources */,
 				8CD1C87227C287A0000E7CC0 /* JsonEndpoint.swift in Sources */,
+				8CD1CB1627C4B192000E7CC0 /* LanguageListScreenModels.swift in Sources */,
 				8CC5CFAC27BADA4300F60301 /* TranslationService.swift in Sources */,
 				8CD1C88027C299ED000E7CC0 /* DateFormatter+Extensions.swift in Sources */,
 			);
