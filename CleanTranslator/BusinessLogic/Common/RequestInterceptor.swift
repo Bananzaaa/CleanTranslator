@@ -16,6 +16,14 @@ final class RequestInterceptor: Alamofire.RequestInterceptor {
     private let baseURL: URL
     private let apiKey: String?
     
+    private var credentials: String {
+        let username = "apikey"
+        let loginString = "\(username):\(apiKey ?? "")"
+        let loginData = loginString.data(using: String.Encoding.utf8)
+        
+        return loginData?.base64EncodedString() ?? ""
+    }
+    
     // MARK: - Init
     
     init(baseURL: URL, apiKey: String?) {
@@ -30,16 +38,11 @@ final class RequestInterceptor: Alamofire.RequestInterceptor {
         for session: Session,
         completion: @escaping (Result<URLRequest, Error>) -> Void) {
             
-        guard
-            let url = urlRequest.url,
-                let apiKey = apiKey
-        else {
-            return
-        }
+        guard let url = urlRequest.url else { return }
         
         var request = urlRequest
         request.url = appendingBaseURL(to: url)
-        request.setValue(apiKey, forHTTPHeaderField: "apikey")
+        request.setValue("Basic \(credentials)", forHTTPHeaderField: "Authorization")
         
         completion(.success(request))
     }

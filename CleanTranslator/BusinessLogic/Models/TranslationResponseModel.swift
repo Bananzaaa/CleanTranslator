@@ -1,5 +1,5 @@
 //
-//  TranslationModel.swift
+//  TranslationResponseModel.swift
 //  CleanTranslator
 //
 //  Created by Stanislav Anatskii on 20.02.2022.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct TranslationResponse: Codable {
-    let translations: [Translation]
+struct TranslationResponseModel: Codable {
+    let translations: [TranslationAPIModel]
     let wordCount: Int
     let characterCount: Int
 }
 
-struct Translation: Codable {
+struct TranslationAPIModel: Codable {
     let translation: String
 }

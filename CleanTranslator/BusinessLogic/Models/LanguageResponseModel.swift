@@ -1,5 +1,5 @@
 //
-//  LaguageModel.swift
+//  LanguageResponseModel.swift
 //  CleanTranslator
 //
 //  Created by Stanislav Anatskii on 20.02.2022.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct LanguageResponse: Codable {
-    let languages: [Language]
+struct LanguageResponseModel: Codable {
+    let languages: [LanguageAPIModel]
 }
 
-struct Language: Codable {
+struct LanguageAPIModel: Codable {
     let language: String
     let languageName: String
     let nativeLanguageName: String

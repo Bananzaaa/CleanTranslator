@@ -39,7 +39,6 @@ final class TranslationScreenView: UIView {
     private lazy var translateButton: UIButton = {
         let button = UIButton()
         button.addTarget(self, action: #selector(actionTranslate), for: .touchUpInside)
-        button.setTitle("Translate, please", for: .normal)
         button.backgroundColor = .systemBlue
         button.titleLabel?.textColor = .white
         return button
@@ -69,6 +68,14 @@ final class TranslationScreenView: UIView {
     }
 
     // MARK: - Public Methods
+    
+    func showTranslation(_ text: String) {
+        translatedLabel.text = text
+    }
+    
+    func setup(with viewModel: TranslationScreenModels.Setup.ViewModel) {
+        translateButton.setTitle(viewModel.buttonTitle, for: .normal)
+    }
 
     // MARK: - Private Methods
 

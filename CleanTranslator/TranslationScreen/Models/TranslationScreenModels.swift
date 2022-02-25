@@ -11,14 +11,22 @@ enum TranslationScreenModels {
     
     // MARK: - Setup Models
     
-    enum SetupExample {
+    enum Setup {
         struct ViewModel {
             let title: String
+            let buttonTitle: String
         }
-        struct Request { }
-        struct Response { }
     }
 
     // MARK: - Update Models
 
+    enum Update {
+        struct Request {
+            let textToTranslate: String
+        }
+        
+        struct Response {
+            let translatedText: String
+        }
+    }
 }

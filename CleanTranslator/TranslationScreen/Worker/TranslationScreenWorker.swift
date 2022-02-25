@@ -6,17 +6,22 @@
 //
 
 protocol TranslationScreenWorkerProtocol {
-    func translate(text: String)
+    var tarnslationModelId: String { get }
+    func translate(text: String, completion: @escaping (Result<[TranslationModel], Error>) -> Void)
 }
 
 final class TranslationScreenWorker: TranslationScreenWorkerProtocol {
 
-    // MARK: - Public Properties
-
-    // MARK: - Private Properties
+    // MARK: - Private properties
     
     private let dataStore: TranslationScreenDataStoreProtocol
     private let service: TranslationService
+    
+    // MARK: - Public properties
+    
+    var tarnslationModelId: String {
+        dataStore.modelId
+    }
 
     // MARK: - Init
     
@@ -28,11 +33,19 @@ final class TranslationScreenWorker: TranslationScreenWorkerProtocol {
         self.service = service
     }
 
-    // MARK: - TranslationScreenWorkerProtocol
-
     // MARK: - Public Methods
     
-    func translate(text: String) {
-        service.translate(with: TranslationRequest(text: [text], modelId: dataStore.modelId))
+    func translate(text: String, completion: @escaping (Result<[TranslationModel], Error>) -> Void) {
+        service.translate(with: TranslationRequestModel(
+            text: [text],
+            modelId: dataStore.modelId)) { result in
+
+            switch result {
+            case .success(let content):
+                completion(.success(content.translations.map { TranslationModel(from: $0) }))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

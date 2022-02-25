@@ -8,12 +8,11 @@
 import UIKit
 
 protocol TranslationScreenDisplayLogic: AnyObject {
-    
+    func setup(with viewModel: TranslationScreenModels.Setup.ViewModel)
+    func showTranslatedText(_ text: String)
 }
 
 final class TranslationScreenViewController: UIViewController, TranslationScreenDisplayLogic {
-    
-    // MARK: - Public Properties
 
     // MARK: - Private Properties
 
@@ -43,9 +42,19 @@ final class TranslationScreenViewController: UIViewController, TranslationScreen
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        interactor.didLoad()
     }
 
     // MARK: - Public Methods
+    
+    func setup(with viewModel: TranslationScreenModels.Setup.ViewModel) {
+        title = viewModel.title
+        mainView.setup(with: viewModel)
+    }
+    
+    func showTranslatedText(_ text: String) {
+        mainView.showTranslation(text)
+    }
 
     // MARK: - Private Methods
 }

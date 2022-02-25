@@ -13,6 +13,5 @@ final class TranslationScreenDataStore: TranslationScreenDataStoreProtocol {
     
     // MARK: - TranslationScreenDataStoreProtocol
     
-    var modelId: String = "ru-en"
-    
+    var modelId: String = "en-ru"
 }

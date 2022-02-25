@@ -8,7 +8,8 @@
 import UIKit
 
 protocol TranslationScreenPresentationLogic: AnyObject {
-
+    func setupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel)
+    func showTranslation(_ response: TranslationScreenModels.Update.Response)
 }
 
 final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
@@ -19,4 +20,11 @@ final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
     
     // MARK: - TranslationScreenPresentationLogic
 
+    func showTranslation(_ response: TranslationScreenModels.Update.Response) {
+        viewController?.showTranslatedText(response.translatedText)
+    }
+    
+    func setupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel) {
+        viewController?.setup(with: viewModel)
+    }
 }
