@@ -32,7 +32,7 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     
     func start() {
         setupWindow()
-        showTranslationScreen()
+        showLanguageListScreen()
     }
     
     // MARK: - Private methods

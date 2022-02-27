@@ -10,9 +10,14 @@
 		12207B94F04076FE72BD1BCA /* Pods_CleanTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9328D7829D4AB6DE484F2137 /* Pods_CleanTranslator.framework */; };
 		1B60AA02D2A3293DD17D778C /* Pods_CleanTranslator_CleanTranslatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E51796DADB01C90C0CA289 /* Pods_CleanTranslator_CleanTranslatorUITests.framework */; };
 		8CB7E08727C8A96E002A8B97 /* TranslatorCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E08627C8A96E002A8B97 /* TranslatorCredentials.swift */; };
+		8CB7E08B27CBABE2002A8B97 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E08A27CBABE2002A8B97 /* Extensions.swift */; };
+		8CB7E08D27CBACB5002A8B97 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E08C27CBACB5002A8B97 /* LanguageTableViewCell.swift */; };
+		8CB7E08F27CBAE65002A8B97 /* LanguageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E08E27CBAE65002A8B97 /* LanguageCellViewModel.swift */; };
+		8CB7E09327CBAFC4002A8B97 /* LanguageListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09227CBAFC4002A8B97 /* LanguageListManager.swift */; };
+		8CB7E09527CBB064002A8B97 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09427CBB064002A8B97 /* LanguageModel.swift */; };
+		8CB7E09727CBB151002A8B97 /* LanguageSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09627CBB151002A8B97 /* LanguageSectionModel.swift */; };
 		8CC5CF7427BAC3E900F60301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7327BAC3E900F60301 /* AppDelegate.swift */; };
 		8CC5CF7627BAC3E900F60301 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7527BAC3E900F60301 /* SceneDelegate.swift */; };
-		8CC5CF7827BAC3E900F60301 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7727BAC3E900F60301 /* ViewController.swift */; };
 		8CC5CF7D27BAC3EA00F60301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7C27BAC3EA00F60301 /* Assets.xcassets */; };
 		8CC5CF8027BAC3EA00F60301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7E27BAC3EA00F60301 /* LaunchScreen.storyboard */; };
 		8CC5CF8B27BAC3EB00F60301 /* CleanTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5CF8A27BAC3EB00F60301 /* CleanTranslatorTests.swift */; };
@@ -50,8 +55,6 @@
 		8CD1CB1727C4B192000E7CC0 /* LanguageListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0827C4B192000E7CC0 /* LanguageListScreenViewController.swift */; };
 		8CD1CB1827C4B192000E7CC0 /* LanguageListScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */; };
 		8CD1CB1927C4B192000E7CC0 /* LanguageListScreenWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */; };
-		8CD1CB1A27C4B192000E7CC0 /* LanguageListScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0C27C4B192000E7CC0 /* LanguageListScreenService.swift */; };
-		8CD1CB1B27C4B192000E7CC0 /* LanguageListScreenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0D27C4B192000E7CC0 /* LanguageListScreenDataStore.swift */; };
 		8CD1CB1C27C4B192000E7CC0 /* LanguageListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB0F27C4B192000E7CC0 /* LanguageListScreenView.swift */; };
 		8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */; };
 		8CD1CB1E27C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1327C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift */; };
@@ -84,10 +87,15 @@
 		63207FBBB1B1CF52FE750395 /* Pods-CleanTranslatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTranslatorTests.release.xcconfig"; path = "Target Support Files/Pods-CleanTranslatorTests/Pods-CleanTranslatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		81C5299B42F8B4AC220580BB /* Pods-CleanTranslator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTranslator.debug.xcconfig"; path = "Target Support Files/Pods-CleanTranslator/Pods-CleanTranslator.debug.xcconfig"; sourceTree = "<group>"; };
 		8CB7E08627C8A96E002A8B97 /* TranslatorCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorCredentials.swift; sourceTree = "<group>"; };
+		8CB7E08A27CBABE2002A8B97 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8CB7E08C27CBACB5002A8B97 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		8CB7E08E27CBAE65002A8B97 /* LanguageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCellViewModel.swift; sourceTree = "<group>"; };
+		8CB7E09227CBAFC4002A8B97 /* LanguageListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListManager.swift; sourceTree = "<group>"; };
+		8CB7E09427CBB064002A8B97 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		8CB7E09627CBB151002A8B97 /* LanguageSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSectionModel.swift; sourceTree = "<group>"; };
 		8CC5CF7027BAC3E900F60301 /* CleanTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC5CF7327BAC3E900F60301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC5CF7527BAC3E900F60301 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CC5CF7727BAC3E900F60301 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8CC5CF7C27BAC3EA00F60301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC5CF7F27BAC3EA00F60301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CC5CF8127BAC3EA00F60301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,8 +136,6 @@
 		8CD1CB0827C4B192000E7CC0 /* LanguageListScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenViewController.swift; sourceTree = "<group>"; };
 		8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenCoordinator.swift; sourceTree = "<group>"; };
 		8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenWorker.swift; sourceTree = "<group>"; };
-		8CD1CB0C27C4B192000E7CC0 /* LanguageListScreenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenService.swift; sourceTree = "<group>"; };
-		8CD1CB0D27C4B192000E7CC0 /* LanguageListScreenDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenDataStore.swift; sourceTree = "<group>"; };
 		8CD1CB0F27C4B192000E7CC0 /* LanguageListScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenView.swift; sourceTree = "<group>"; };
 		8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenInteractor.swift; sourceTree = "<group>"; };
 		8CD1CB1327C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenCoordinatorFactory.swift; sourceTree = "<group>"; };
@@ -207,8 +213,8 @@
 				8CC5CF7327BAC3E900F60301 /* AppDelegate.swift */,
 				8CC5CF7527BAC3E900F60301 /* SceneDelegate.swift */,
 				8CD1C89027C2B821000E7CC0 /* AppCoordinator.swift */,
-				8CC5CF7727BAC3E900F60301 /* ViewController.swift */,
 				8CD1C88E27C2B757000E7CC0 /* Coordinator.swift */,
+				8CB7E08A27CBABE2002A8B97 /* Extensions.swift */,
 				8CD1CB0227C4B192000E7CC0 /* LanguageListScreen */,
 				8CD1CAE427C4B181000E7CC0 /* TranslationScreen */,
 				8CC5CFAE27BAE86A00F60301 /* BusinessLogic */,
@@ -384,13 +390,13 @@
 		8CD1CB0227C4B192000E7CC0 /* LanguageListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */,
+				8CD1CB1027C4B192000E7CC0 /* Interactor */,
 				8CD1CB0327C4B192000E7CC0 /* Presenter */,
 				8CD1CB0527C4B192000E7CC0 /* Models */,
 				8CD1CB0727C4B192000E7CC0 /* ViewControllers */,
-				8CD1CB0927C4B192000E7CC0 /* LanguageListScreenCoordinator.swift */,
 				8CD1CB0A27C4B192000E7CC0 /* Worker */,
 				8CD1CB0E27C4B192000E7CC0 /* Views */,
-				8CD1CB1027C4B192000E7CC0 /* Interactor */,
 				8CD1CB1227C4B192000E7CC0 /* Factory */,
 			);
 			path = LanguageListScreen;
@@ -408,6 +414,9 @@
 			isa = PBXGroup;
 			children = (
 				8CD1CB0627C4B192000E7CC0 /* LanguageListScreenModels.swift */,
+				8CB7E08E27CBAE65002A8B97 /* LanguageCellViewModel.swift */,
+				8CB7E09427CBB064002A8B97 /* LanguageModel.swift */,
+				8CB7E09627CBB151002A8B97 /* LanguageSectionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				8CD1CB0827C4B192000E7CC0 /* LanguageListScreenViewController.swift */,
+				8CB7E09227CBAFC4002A8B97 /* LanguageListManager.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -424,8 +434,6 @@
 			isa = PBXGroup;
 			children = (
 				8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */,
-				8CD1CB0C27C4B192000E7CC0 /* LanguageListScreenService.swift */,
-				8CD1CB0D27C4B192000E7CC0 /* LanguageListScreenDataStore.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -434,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				8CD1CB0F27C4B192000E7CC0 /* LanguageListScreenView.swift */,
+				8CB7E08C27CBACB5002A8B97 /* LanguageTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -707,7 +716,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC5CF7827BAC3E900F60301 /* ViewController.swift in Sources */,
 				8CD1CB1727C4B192000E7CC0 /* LanguageListScreenViewController.swift in Sources */,
 				8CD1CAFC27C4B181000E7CC0 /* TranslationScreenDataStore.swift in Sources */,
 				8CD1CAFE27C4B181000E7CC0 /* TranslationScreenView.swift in Sources */,
@@ -716,16 +724,20 @@
 				8CD1C88427C29EF6000E7CC0 /* TranslationResponseModel.swift in Sources */,
 				8CD1C87627C288AE000E7CC0 /* HTTPError.swift in Sources */,
 				8CD1CB1927C4B192000E7CC0 /* LanguageListScreenWorker.swift in Sources */,
+				8CB7E09327CBAFC4002A8B97 /* LanguageListManager.swift in Sources */,
+				8CB7E08F27CBAE65002A8B97 /* LanguageCellViewModel.swift in Sources */,
 				8CD1C86E27C285CB000E7CC0 /* APIService.swift in Sources */,
 				8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */,
 				8CD1CB1C27C4B192000E7CC0 /* LanguageListScreenView.swift in Sources */,
 				8CD1CB2C27C669BE000E7CC0 /* TranslationModel.swift in Sources */,
+				8CB7E09727CBB151002A8B97 /* LanguageSectionModel.swift in Sources */,
 				8CC5CF7427BAC3E900F60301 /* AppDelegate.swift in Sources */,
 				8CD1C88627C29FE2000E7CC0 /* LanguageResponseModel.swift in Sources */,
 				8CD1C87A27C2915B000E7CC0 /* LanguageListEndpoint.swift in Sources */,
 				8CD1CAF727C4B181000E7CC0 /* TranslationScreenPresenter.swift in Sources */,
 				8CD1CB1F27C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift in Sources */,
 				8CD1CAFA27C4B181000E7CC0 /* TranslationScreenViewController.swift in Sources */,
+				8CB7E08B27CBABE2002A8B97 /* Extensions.swift in Sources */,
 				8CD1C88F27C2B757000E7CC0 /* Coordinator.swift in Sources */,
 				8CD1CAF927C4B181000E7CC0 /* TranslationScreenCoordinator.swift in Sources */,
 				8CC5CFAA27BAD77B00F60301 /* RequestInterceptor.swift in Sources */,
@@ -735,15 +747,15 @@
 				8CD1CB0027C4B181000E7CC0 /* TranslationScreenModuleFactory.swift in Sources */,
 				8CD1CAFF27C4B181000E7CC0 /* TranslationScreenInteractor.swift in Sources */,
 				8CD1CB1E27C4B192000E7CC0 /* LanguageListScreenCoordinatorFactory.swift in Sources */,
+				8CB7E08D27CBACB5002A8B97 /* LanguageTableViewCell.swift in Sources */,
 				8CD1CB1527C4B192000E7CC0 /* LanguageListScreenPresenter.swift in Sources */,
-				8CD1CB1B27C4B192000E7CC0 /* LanguageListScreenDataStore.swift in Sources */,
+				8CB7E09527CBB064002A8B97 /* LanguageModel.swift in Sources */,
 				8CD1CB0127C4B181000E7CC0 /* TranslationScreenCoordinatorFactory.swift in Sources */,
 				8CC5CF7627BAC3E900F60301 /* SceneDelegate.swift in Sources */,
 				8CD1CAFB27C4B181000E7CC0 /* TranslationScreenWorker.swift in Sources */,
 				8CD1C87E27C298FE000E7CC0 /* Codable+Extensions.swift in Sources */,
 				8CC5CFA427BACE2A00F60301 /* ServiceLayer.swift in Sources */,
 				8CD1C89127C2B821000E7CC0 /* AppCoordinator.swift in Sources */,
-				8CD1CB1A27C4B192000E7CC0 /* LanguageListScreenService.swift in Sources */,
 				8CD1C87227C287A0000E7CC0 /* JsonEndpoint.swift in Sources */,
 				8CD1CB1627C4B192000E7CC0 /* LanguageListScreenModels.swift in Sources */,
 				8CC5CFAC27BADA4300F60301 /* TranslationService.swift in Sources */,

@@ -11,14 +11,27 @@ enum LanguageListScreenModels {
     
     // MARK: - Setup Models
     
-    enum SetupExample {
+    enum Setup {
         struct ViewModel {
             let title: String
+            let buttonTitle: String
         }
-        struct Request { }
-        struct Response { }
     }
-
+    
     // MARK: - Update Models
-
+    
+    enum UpdateLanguageList {
+        struct ViewModel {
+            let sections: [LanguageSectionModel]
+        }
+        struct Response {
+            let languages: [LanguageModel]
+        }
+    }
+    
+    enum Error {
+        struct Response {
+            let errorDescription: String
+        }
+    }
 }

@@ -15,9 +15,10 @@ final class TranslationScreenView: UIView {
     
     // MARK: - Constants
 
-    fileprivate enum Constants {
+    private enum Constants {
         static let buttonHeight: CGFloat = 54
         static let textViewHeight: CGFloat = 200
+        static let cornerRadius: CGFloat = 8
     }
     
     // MARK: - UI
@@ -40,6 +41,7 @@ final class TranslationScreenView: UIView {
         let button = UIButton()
         button.addTarget(self, action: #selector(actionTranslate), for: .touchUpInside)
         button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = Constants.cornerRadius
         button.titleLabel?.textColor = .white
         return button
     }()

@@ -6,29 +6,32 @@
 //
 
 protocol LanguageListScreenWorkerProtocol {
-    
+    func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void)
 }
 
 final class LanguageListScreenWorker: LanguageListScreenWorkerProtocol {
 
-    // MARK: - Public Properties
-
     // MARK: - Private Properties
     
-    private let dataStore: LanguageListScreenDataStoreProtocol
-    private let service: LanguageListScreenServiceProtocol
+    private let service: TranslationService
 
     // MARK: - Init
     
-    init(
-        dataStore: LanguageListScreenDataStoreProtocol,
-        service: LanguageListScreenServiceProtocol) {
+    init(service: TranslationService) {
         
-        self.dataStore = dataStore
         self.service = service
     }
 
     // MARK: - LanguageListScreenWorkerProtocol
 
-    // MARK: - Public Methods
+    func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void) {
+        service.getLanguageList { result in
+            switch result {
+            case .success(let model):
+                completion(.success(model.languages.map { LanguageModel(from: $0) }))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

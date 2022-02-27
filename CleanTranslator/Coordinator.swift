@@ -17,7 +17,6 @@ public protocol Coordinator: NSObject {
     func navigationController(_ navigationController: UINavigationController, didDismiss viewController: UIViewController)
     
     func start()
-    
 }
 
 public extension Coordinator {
