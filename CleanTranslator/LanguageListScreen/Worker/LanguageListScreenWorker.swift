@@ -6,6 +6,7 @@
 //
 
 protocol LanguageListScreenWorkerProtocol {
+    var languageModelId: String { get }
     func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void)
 }
 
@@ -13,16 +14,24 @@ final class LanguageListScreenWorker: LanguageListScreenWorkerProtocol {
 
     // MARK: - Private Properties
     
+    private let dataStore: LanguageListScreenDataStoreProtocol
     private let service: TranslationService
 
     // MARK: - Init
     
-    init(service: TranslationService) {
+    init(
+        dataStore: LanguageListScreenDataStoreProtocol,
+        service: TranslationService) {
         
         self.service = service
+        self.dataStore = dataStore
     }
 
     // MARK: - LanguageListScreenWorkerProtocol
+    
+    var languageModelId: String {
+        dataStore.languageModelId
+    }
 
     func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void) {
         service.getLanguageList { result in

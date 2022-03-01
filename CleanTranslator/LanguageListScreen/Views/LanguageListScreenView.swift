@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol LanguageListScreenViewDelegate: AnyObject {
-    
+    func nextButtonTapped()
 }
 
 final class LanguageListScreenView: UIView {
@@ -122,6 +122,6 @@ final class LanguageListScreenView: UIView {
     // MARK: - Actions
     
     @objc private func actionChooseLanguage() {
-        print(#function)
+        delegate?.nextButtonTapped()
     }
 }

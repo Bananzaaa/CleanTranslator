@@ -6,13 +6,16 @@
 //
 
 /// Интерфейс для делегирования обработки событий вне модуля
-protocol LanguageListScreenModuleOutput: AnyObject {}
+protocol LanguageListScreenModuleOutput: AnyObject {
+    func didChooseLanguage(_ languageModelId: String)
+}
 
 /// Интерфейс внешнего обновления модуля
 protocol LanguageListScreenUpdater { }
 
 protocol LanguageListScreenBusinessLogic {
     func didLoad()
+    func didChooseLanguage()
 }
 
 final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
@@ -41,6 +44,10 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
     func didLoad() {
         setupScreen()
         getLanguaheList()
+    }
+    
+    func didChooseLanguage() {
+        moduleOutput?.didChooseLanguage(worker.languageModelId)
     }
 
     // MARK: - Private Methods
@@ -73,4 +80,6 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
 
 // MARK: - LanguageListScreenUpdater
 
-extension LanguageListScreenInteractor: LanguageListScreenUpdater {}
+extension LanguageListScreenInteractor: LanguageListScreenUpdater {
+    
+}

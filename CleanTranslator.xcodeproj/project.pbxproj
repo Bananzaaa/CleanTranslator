@@ -16,6 +16,7 @@
 		8CB7E09327CBAFC4002A8B97 /* LanguageListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09227CBAFC4002A8B97 /* LanguageListManager.swift */; };
 		8CB7E09527CBB064002A8B97 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09427CBB064002A8B97 /* LanguageModel.swift */; };
 		8CB7E09727CBB151002A8B97 /* LanguageSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09627CBB151002A8B97 /* LanguageSectionModel.swift */; };
+		8CB7E09927CBE77F002A8B97 /* LanguageListScreenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E09827CBE77F002A8B97 /* LanguageListScreenDataStore.swift */; };
 		8CC5CF7427BAC3E900F60301 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7327BAC3E900F60301 /* AppDelegate.swift */; };
 		8CC5CF7627BAC3E900F60301 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7527BAC3E900F60301 /* SceneDelegate.swift */; };
 		8CC5CF7D27BAC3EA00F60301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC5CF7C27BAC3EA00F60301 /* Assets.xcassets */; };
@@ -93,6 +94,7 @@
 		8CB7E09227CBAFC4002A8B97 /* LanguageListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListManager.swift; sourceTree = "<group>"; };
 		8CB7E09427CBB064002A8B97 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
 		8CB7E09627CBB151002A8B97 /* LanguageSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSectionModel.swift; sourceTree = "<group>"; };
+		8CB7E09827CBE77F002A8B97 /* LanguageListScreenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageListScreenDataStore.swift; sourceTree = "<group>"; };
 		8CC5CF7027BAC3E900F60301 /* CleanTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC5CF7327BAC3E900F60301 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC5CF7527BAC3E900F60301 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				8CD1CB0B27C4B192000E7CC0 /* LanguageListScreenWorker.swift */,
+				8CB7E09827CBE77F002A8B97 /* LanguageListScreenDataStore.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				8CD1C86E27C285CB000E7CC0 /* APIService.swift in Sources */,
 				8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */,
 				8CD1CB1C27C4B192000E7CC0 /* LanguageListScreenView.swift in Sources */,
+				8CB7E09927CBE77F002A8B97 /* LanguageListScreenDataStore.swift in Sources */,
 				8CD1CB2C27C669BE000E7CC0 /* TranslationModel.swift in Sources */,
 				8CB7E09727CBB151002A8B97 /* LanguageSectionModel.swift in Sources */,
 				8CC5CF7427BAC3E900F60301 /* AppDelegate.swift in Sources */,

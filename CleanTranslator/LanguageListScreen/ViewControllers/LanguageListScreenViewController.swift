@@ -73,5 +73,7 @@ final class LanguageListScreenViewController: UIViewController, LanguageListScre
 }
 
 extension LanguageListScreenViewController: LanguageListScreenViewDelegate {
-
+    func nextButtonTapped() {
+        interactor.didChooseLanguage()
+    }
 }

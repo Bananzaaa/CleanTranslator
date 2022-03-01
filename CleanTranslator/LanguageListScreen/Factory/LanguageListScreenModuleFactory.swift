@@ -25,8 +25,9 @@ final class MainLanguageListScreenModuleFactory: LanguageListScreenModuleFactory
         moduleOutput delegate: LanguageListScreenModuleOutput?) -> LanguageListScreenModule {
         
         // Worker Setup
+        let dataStore = LanguageListScreenDataStore()
         let service = ServiceLayer.shared.translationService
-        let worker = LanguageListScreenWorker(service: service)
+        let worker = LanguageListScreenWorker(dataStore: dataStore, service: service)
         
         // VIP Cycle Setup
         let presenter = LanguageListScreenPresenter()

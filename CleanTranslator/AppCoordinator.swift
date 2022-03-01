@@ -49,6 +49,7 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
         let coordinator = coordinatorFactory
             .createLanguageListScreenCoordinator(navigationController: navigationController)
         childCoordinators.append(coordinator)
+        coordinator.delegate = self
         coordinator.start()
     }
     
@@ -59,5 +60,11 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
             .createTranslationScreenCoordinator(navigationController: navigationController)
         childCoordinators.append(coordinator)
         coordinator.start()
+    }
+}
+
+extension MainAppCoordinator: LanguageListScreenCoordinatorDelegate {
+    func didChooseLanguage(_ languageModelId: String) {
+        showTranslationScreen()
     }
 }

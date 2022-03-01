@@ -8,10 +8,14 @@
 import UIKit
 
 /// Делегат координатора 
-protocol LanguageListScreenCoordinatorDelegate: AnyObject {}
+protocol LanguageListScreenCoordinatorDelegate: AnyObject {
+    func didChooseLanguage(_ languageModelId: String)
+}
 
 /// Координатор
-protocol LanguageListScreenCoordinator: Coordinator {}
+protocol LanguageListScreenCoordinator: Coordinator {
+    var delegate: LanguageListScreenCoordinatorDelegate? { get set }
+}
 
 final class MainLanguageListScreenCoordinator: NSObject, LanguageListScreenCoordinator {
     
@@ -53,5 +57,7 @@ final class MainLanguageListScreenCoordinator: NSObject, LanguageListScreenCoord
 }
 
 extension MainLanguageListScreenCoordinator: LanguageListScreenModuleOutput {
-
+    func didChooseLanguage(_ languageModelId: String) {
+        delegate?.didChooseLanguage(languageModelId)
+    }
 }
