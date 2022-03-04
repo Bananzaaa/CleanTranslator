@@ -16,17 +16,37 @@ enum TranslationScreenModels {
             let title: String
             let buttonTitle: String
         }
+        
+        struct Response {
+            let languageModelId: String
+        }
     }
 
     // MARK: - Update Models
 
     enum Update {
+        struct ViewModel {
+            let translatedText: String
+            let font: UIFont
+        }
+        
         struct Request {
             let textToTranslate: String
         }
         
         struct Response {
             let translatedText: String
+        }
+    }
+    
+    enum Error {
+        struct ViewModel {
+            let message: String
+            let okButtonTirle: String
+        }
+        
+        struct Response {
+            let message: String
         }
     }
 }

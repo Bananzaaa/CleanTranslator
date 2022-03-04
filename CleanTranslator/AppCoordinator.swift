@@ -53,11 +53,14 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
         coordinator.start()
     }
     
-    private func showTranslationScreen() {
-        let moduleFactory = MainTranslationScreenModuleFactory()
+    private func showTranslationScreen(with dataStore: TranslationScreenDataStoreProtocol) {
+        let moduleFactory = MainTranslationScreenModuleFactory(
+            alertFactory: AssemblyContainer.Factories.alertsFactory())
         let coordinatorFactory = MainTranslationScreenCoordinatorFactory(moduleFactory: moduleFactory)
         let coordinator = coordinatorFactory
-            .createTranslationScreenCoordinator(navigationController: navigationController)
+            .createTranslationScreenCoordinator(
+                navigationController: navigationController,
+                translationDataStore: dataStore)
         childCoordinators.append(coordinator)
         coordinator.start()
     }
@@ -65,6 +68,6 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
 
 extension MainAppCoordinator: LanguageListScreenCoordinatorDelegate {
     func didChooseLanguage(_ languageModelId: String) {
-        showTranslationScreen()
+        showTranslationScreen(with: TranslationScreenDataStore(fromLanguageId: "en", toLanguageId: languageModelId))
     }
 }

@@ -9,7 +9,8 @@ import UIKit
 
 protocol TranslationScreenCoordinatorFactory {
     func createTranslationScreenCoordinator(
-        navigationController: UINavigationController) -> TranslationScreenCoordinator
+        navigationController: UINavigationController,
+        translationDataStore: TranslationScreenDataStoreProtocol) -> TranslationScreenCoordinator
 }
 
 final class MainTranslationScreenCoordinatorFactory: TranslationScreenCoordinatorFactory {
@@ -27,10 +28,12 @@ final class MainTranslationScreenCoordinatorFactory: TranslationScreenCoordinato
     // MARK: - Public methods
 
     func createTranslationScreenCoordinator(
-        navigationController: UINavigationController) -> TranslationScreenCoordinator {
+        navigationController: UINavigationController,
+        translationDataStore: TranslationScreenDataStoreProtocol) -> TranslationScreenCoordinator {
         
         MainTranslationScreenCoordinator(
             navigationController: navigationController,
-            moduleFactory: moduleFactory)
+            moduleFactory: moduleFactory,
+            translationDataStore: translationDataStore)
     }
 }

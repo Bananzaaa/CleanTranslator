@@ -8,11 +8,12 @@
 import UIKit
 
 protocol LanguageListManager: UITableViewDataSource, UITableViewDelegate {
+    var delegate: LanguageListManagerDelegate? { get set }
     func updateSections(_ sections: [LanguageSectionModel])
 }
 
 protocol LanguageListManagerDelegate: AnyObject {
-    func didSelectLanguage(_ countryCode: String)
+    func didSelectLanguage(_ languageCode: String)
 }
 
 final class MainLanguageListManager: NSObject, LanguageListManager {
@@ -53,7 +54,7 @@ extension MainLanguageListManager: UITableViewDataSource {
 
 extension MainLanguageListManager: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let countryCode = sections[indexPath.section].content[indexPath.row].countryCode
-        delegate?.didSelectLanguage(countryCode)
+        let languageCode = sections[indexPath.section].content[indexPath.row].languageCode
+        delegate?.didSelectLanguage(languageCode)
     }
 }

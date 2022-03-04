@@ -10,6 +10,7 @@ import UIKit
 protocol LanguageListScreenPresentationLogic: AnyObject {
     func setupScreen()
     func showLanguageList(_ response: LanguageListScreenModels.UpdateLanguageList.Response)
+    func updateScreen(_ response: LanguageListScreenModels.UpdateScreen.Response)
     func showError(_ response: LanguageListScreenModels.Error.Response)
     func showLoading()
     func hideLoading()
@@ -23,15 +24,22 @@ final class LanguageListScreenPresenter: LanguageListScreenPresentationLogic {
     
     // MARK: - LanguageListScreenPresentationLogic
     
+    func updateScreen(_ response: LanguageListScreenModels.UpdateScreen.Response) {
+        viewController?.updateScreen(LanguageListScreenModels.UpdateScreen.ViewModel(
+            title: "English -> \(response.languageName)",
+            isEnabledNextButton: true))
+    }
+    
     func setupScreen() {
         viewController?.setupScreen(LanguageListScreenModels.Setup.ViewModel(
-            title: "En -> Ru",
-            buttonTitle: "Next"))
+            title: "English ->",
+            buttonTitle: "Next",
+            isEnabledNextButton: false))
     }
 
     func showLanguageList(_ response: LanguageListScreenModels.UpdateLanguageList.Response) {
         let cellModels = response.languages.map {
-            LanguageCellViewModel(name: $0.languageName, countryCode: $0.countryCode)
+            LanguageCellViewModel(name: $0.nativeLanguageName, languageCode: $0.language)
         }
         let sections = [LanguageSectionModel(content: cellModels)]
         

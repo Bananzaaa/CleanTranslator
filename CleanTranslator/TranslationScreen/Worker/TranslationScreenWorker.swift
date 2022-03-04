@@ -6,7 +6,7 @@
 //
 
 protocol TranslationScreenWorkerProtocol {
-    var tarnslationModelId: String { get }
+    var translationModelId: String { get }
     func translate(text: String, completion: @escaping (Result<[TranslationModel], Error>) -> Void)
 }
 
@@ -19,7 +19,7 @@ final class TranslationScreenWorker: TranslationScreenWorkerProtocol {
     
     // MARK: - Public properties
     
-    var tarnslationModelId: String {
+    var translationModelId: String {
         dataStore.modelId
     }
 

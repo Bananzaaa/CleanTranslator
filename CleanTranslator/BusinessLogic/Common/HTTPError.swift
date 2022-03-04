@@ -21,6 +21,8 @@ extension HTTPError: LocalizedError {
                 return "Пользователь не авторизован"
             case 403:
                 return "Доступ запрещен"
+            case 404:
+                return "Языковая модель не найдена"
             case 500:
                 return "Внутренняя ошибка сервера"
             default:

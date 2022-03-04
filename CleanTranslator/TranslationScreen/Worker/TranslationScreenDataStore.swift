@@ -6,12 +6,23 @@
 //
 
 protocol TranslationScreenDataStoreProtocol {
-    var modelId: String { get set }
+    var modelId: String { get }
 }
 
 final class TranslationScreenDataStore: TranslationScreenDataStoreProtocol {
     
-    // MARK: - TranslationScreenDataStoreProtocol
+    private let fromLanguageId: String
+    private let toLanguageId: String
     
-    var modelId: String = "en-ru"
+    init(fromLanguageId: String, toLanguageId: String) {
+        self.fromLanguageId = fromLanguageId
+        self.toLanguageId = toLanguageId
+    }
+    
+    // MARK: - TranslationScreenDataStoreProtocol
+        
+    
+    var modelId: String {
+        fromLanguageId + "-" + toLanguageId
+    }
 }

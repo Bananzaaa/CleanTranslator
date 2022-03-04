@@ -15,10 +15,21 @@ enum LanguageListScreenModels {
         struct ViewModel {
             let title: String
             let buttonTitle: String
+            let isEnabledNextButton: Bool
         }
     }
     
     // MARK: - Update Models
+    
+    enum UpdateScreen {
+        struct ViewModel {
+            let title: String
+            let isEnabledNextButton: Bool
+        }
+        struct Response {
+            let languageName: String
+        }
+    }
     
     enum UpdateLanguageList {
         struct ViewModel {

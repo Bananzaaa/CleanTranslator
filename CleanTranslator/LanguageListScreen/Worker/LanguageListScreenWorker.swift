@@ -6,7 +6,9 @@
 //
 
 protocol LanguageListScreenWorkerProtocol {
-    var languageModelId: String { get }
+    var currentLanguageCode: String { get }
+    var currentLanguageName: String { get }
+    func changeCurrentLanguage(_ languageCode: String)
     func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void)
 }
 
@@ -14,7 +16,7 @@ final class LanguageListScreenWorker: LanguageListScreenWorkerProtocol {
 
     // MARK: - Private Properties
     
-    private let dataStore: LanguageListScreenDataStoreProtocol
+    private var dataStore: LanguageListScreenDataStoreProtocol
     private let service: TranslationService
 
     // MARK: - Init
@@ -29,15 +31,25 @@ final class LanguageListScreenWorker: LanguageListScreenWorkerProtocol {
 
     // MARK: - LanguageListScreenWorkerProtocol
     
-    var languageModelId: String {
-        dataStore.languageModelId
+    var currentLanguageCode: String {
+        dataStore.currentLanguageCode
+    }
+    
+    var currentLanguageName: String {
+        dataStore.languages.first(where: { $0.language == currentLanguageCode })?.nativeLanguageName ?? ""
+    }
+    
+    func changeCurrentLanguage(_ languageCode: String) {
+        dataStore.currentLanguageCode = languageCode
     }
 
     func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void) {
-        service.getLanguageList { result in
+        service.getLanguageList { [weak self] result in
             switch result {
             case .success(let model):
-                completion(.success(model.languages.map { LanguageModel(from: $0) }))
+                let languages = model.languages.map { LanguageModel(from: $0) }
+                self?.dataStore.languages = languages
+                completion(.success(languages))
             case .failure(let error):
                 completion(.failure(error))
             }

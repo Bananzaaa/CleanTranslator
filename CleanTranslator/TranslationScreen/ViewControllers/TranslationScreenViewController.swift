@@ -9,7 +9,8 @@ import UIKit
 
 protocol TranslationScreenDisplayLogic: AnyObject {
     func setup(with viewModel: TranslationScreenModels.Setup.ViewModel)
-    func showTranslatedText(_ text: String)
+    func showTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel)
+    func showError(_ viewModel: TranslationScreenModels.Error.ViewModel)
 }
 
 final class TranslationScreenViewController: UIViewController, TranslationScreenDisplayLogic {
@@ -18,11 +19,13 @@ final class TranslationScreenViewController: UIViewController, TranslationScreen
 
     private let interactor: TranslationScreenBusinessLogic
     private let mainView: TranslationScreenView
+    private let alertFactory: AlertFactory
 
     // MARK: - Init
 
-    init(interactor: TranslationScreenBusinessLogic) {
+    init(interactor: TranslationScreenBusinessLogic, alertFactory: AlertFactory) {
         self.interactor = interactor
+        self.alertFactory = alertFactory
         mainView = TranslationScreenView()
         
         super.init(nibName: nil, bundle: nil)
@@ -52,15 +55,18 @@ final class TranslationScreenViewController: UIViewController, TranslationScreen
         mainView.setup(with: viewModel)
     }
     
-    func showTranslatedText(_ text: String) {
-        mainView.showTranslation(text)
+    func showTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel) {
+        mainView.showTranslation(viewModel)
     }
-
-    // MARK: - Private Methods
+    
+    func showError(_ viewModel: TranslationScreenModels.Error.ViewModel) {
+        let alert = alertFactory.createErrorAlert(message: viewModel.message)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension TranslationScreenViewController: TranslationScreenViewDelegate {
     func translate(text: String) {
-        interactor.translate(text: text)
+        interactor.didRequestTranslate(TranslationScreenModels.Update.Request(textToTranslate: text))
     }
 }

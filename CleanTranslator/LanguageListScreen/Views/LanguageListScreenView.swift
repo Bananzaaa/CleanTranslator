@@ -70,11 +70,16 @@ final class LanguageListScreenView: UIView {
     
     func setup(with viewModel: LanguageListScreenModels.Setup.ViewModel) {
         nextButton.setTitle(viewModel.buttonTitle, for: .normal)
+        nextButton.isEnabled = viewModel.isEnabledNextButton
     }
     
-    func update(with viewModel: LanguageListScreenModels.UpdateLanguageList.ViewModel) {
+    func setSections(with viewModel: LanguageListScreenModels.UpdateLanguageList.ViewModel) {
         tableManager.updateSections(viewModel.sections)
         updateTable()
+    }
+    
+    func update(with viewModel: LanguageListScreenModels.UpdateScreen.ViewModel) {
+        nextButton.isEnabled = viewModel.isEnabledNextButton
     }
     
     func showLoading() {

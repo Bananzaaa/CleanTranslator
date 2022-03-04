@@ -19,12 +19,14 @@ final class TranslationScreenView: UIView {
         static let buttonHeight: CGFloat = 54
         static let textViewHeight: CGFloat = 200
         static let cornerRadius: CGFloat = 8
+        static let font: UIFont = .systemFont(ofSize: 17)
     }
     
     // MARK: - UI
     
     private lazy var originalTextView: UITextView = {
         let textView = UITextView()
+        textView.font = Constants.font
         textView.layer.borderColor = UIColor.red.cgColor
         textView.layer.borderWidth = 1
         return textView
@@ -32,8 +34,7 @@ final class TranslationScreenView: UIView {
     
     private lazy var translatedLabel: UILabel = {
         let label = UILabel()
-        label.layer.borderColor = UIColor.blue.cgColor
-        label.layer.borderWidth = 1
+        label.font = Constants.font
         return label
     }()
     
@@ -56,8 +57,6 @@ final class TranslationScreenView: UIView {
 
     weak var delegate: TranslationScreenViewDelegate?
 
-    // MARK: - Private Properties
-
     // MARK: - Init
 
     init() {
@@ -71,8 +70,9 @@ final class TranslationScreenView: UIView {
 
     // MARK: - Public Methods
     
-    func showTranslation(_ text: String) {
-        translatedLabel.text = text
+    func showTranslation(_ viewModel: TranslationScreenModels.Update.ViewModel) {
+        translatedLabel.text = viewModel.translatedText
+        translatedLabel.font = viewModel.font
     }
     
     func setup(with viewModel: TranslationScreenModels.Setup.ViewModel) {

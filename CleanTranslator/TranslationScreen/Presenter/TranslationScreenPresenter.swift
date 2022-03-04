@@ -8,8 +8,9 @@
 import UIKit
 
 protocol TranslationScreenPresentationLogic: AnyObject {
-    func setupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel)
+    func setupScreen(_ response: TranslationScreenModels.Setup.Response)
     func showTranslation(_ response: TranslationScreenModels.Update.Response)
+    func showError(_ response: TranslationScreenModels.Error.Response)
 }
 
 final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
@@ -21,10 +22,22 @@ final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
     // MARK: - TranslationScreenPresentationLogic
 
     func showTranslation(_ response: TranslationScreenModels.Update.Response) {
-        viewController?.showTranslatedText(response.translatedText)
+        let viewModel = TranslationScreenModels.Update.ViewModel(
+            translatedText: response.translatedText,
+            font: .systemFont(ofSize: 17, weight: .semibold))
+        viewController?.showTranslatedText(viewModel)
     }
     
-    func setupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel) {
+    func setupScreen(_ response: TranslationScreenModels.Setup.Response) {
+        let viewModel = TranslationScreenModels.Setup.ViewModel(
+            title: response.languageModelId,
+            buttonTitle: "Translate, please!")
         viewController?.setup(with: viewModel)
+    }
+    
+    func showError(_ response: TranslationScreenModels.Error.Response) {
+        viewController?.showError(TranslationScreenModels.Error.ViewModel(
+            message: response.message,
+            okButtonTirle: "Ok"))
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 struct LanguageCellViewModel {
     let name: String
-    let countryCode: String
+    let languageCode: String
 }

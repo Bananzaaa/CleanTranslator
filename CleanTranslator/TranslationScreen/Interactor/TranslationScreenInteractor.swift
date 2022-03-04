@@ -12,7 +12,7 @@ protocol TranslationScreenModuleOutput: AnyObject {}
 protocol TranslationScreenUpdater {}
 
 protocol TranslationScreenBusinessLogic {
-    func translate(text: String)
+    func didRequestTranslate(_ request: TranslationScreenModels.Update.Request)
     func didLoad()
 }
 
@@ -39,8 +39,8 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
 
     // MARK: - Public Methods
     
-    func translate(text: String) {
-        worker.translate(text: text) { [weak self] result in
+    func didRequestTranslate(_ request: TranslationScreenModels.Update.Request) {
+        worker.translate(text: request.textToTranslate) { [weak self] result in
             switch result {
             case .success(let translation):
                 self?.showTranslation(translation)
@@ -51,15 +51,14 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
     }
     
     func didLoad() {
-        presenter.setupScreen(with: TranslationScreenModels.Setup.ViewModel(
-            title: worker.tarnslationModelId,
-            buttonTitle: "Translate, please!"))
+        presenter.setupScreen(TranslationScreenModels.Setup.Response(
+            languageModelId: worker.translationModelId))
     }
 
     // MARK: - Private Methods
     
     private func showError(_ error: Error) {
-        
+        presenter.showError(TranslationScreenModels.Error.Response(message: error.localizedDescription))
     }
     
     private func showTranslation(_ translation: [TranslationModel]) {

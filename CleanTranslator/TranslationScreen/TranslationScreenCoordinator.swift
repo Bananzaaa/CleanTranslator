@@ -18,6 +18,7 @@ final class MainTranslationScreenCoordinator: NSObject, TranslationScreenCoordin
     // MARK: - Private properties
     
     private let moduleFactory: TranslationScreenModuleFactory
+    private let translationDataStore: TranslationScreenDataStoreProtocol
     
     // MARK: - Public properties
 
@@ -34,16 +35,20 @@ final class MainTranslationScreenCoordinator: NSObject, TranslationScreenCoordin
     
     init(
         navigationController: UINavigationController,
-        moduleFactory: TranslationScreenModuleFactory) {
+        moduleFactory: TranslationScreenModuleFactory,
+        translationDataStore: TranslationScreenDataStoreProtocol) {
             
         self.navigationController = navigationController
         self.moduleFactory = moduleFactory
+        self.translationDataStore = translationDataStore
     }
     
     // MARK: - Public Methods
     
     func start() {
-        let module = moduleFactory.createModule(moduleOutput: self)
+        let module = moduleFactory.createModule(
+            dataStore: translationDataStore,
+            moduleOutput: self)
         self.module = module
 
         navigationController.pushViewController(module.viewController, animated: true)
