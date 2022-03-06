@@ -15,8 +15,8 @@ protocol LanguageListScreenUpdater { }
 
 protocol LanguageListScreenBusinessLogic {
     func didLoad()
-    func didChooseLanguage()
-    func didSelectLanguage(_ languageCode: String)
+    func didRequestChooseLanguage()
+    func didRequestSelectLanguage(_ request: LanguageListScreenModels.UpdateLanguageList.Request)
 }
 
 final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
@@ -47,12 +47,12 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
         getLanguaheList()
     }
     
-    func didChooseLanguage() {
+    func didRequestChooseLanguage() {
         moduleOutput?.didChooseLanguage(worker.currentLanguageCode)
     }
     
-    func didSelectLanguage(_ languageCode: String) {
-        handleLanguageChange(languageCode)
+    func didRequestSelectLanguage(_ request: LanguageListScreenModels.UpdateLanguageList.Request) {
+        handleLanguageChange(request.languageCode)
     }
 
     // MARK: - Private Methods

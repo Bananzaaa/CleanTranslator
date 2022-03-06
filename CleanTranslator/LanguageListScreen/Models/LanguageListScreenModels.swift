@@ -35,6 +35,9 @@ enum LanguageListScreenModels {
         struct ViewModel {
             let sections: [LanguageSectionModel]
         }
+        struct Request {
+            let languageCode: String
+        }
         struct Response {
             let languages: [LanguageModel]
         }
