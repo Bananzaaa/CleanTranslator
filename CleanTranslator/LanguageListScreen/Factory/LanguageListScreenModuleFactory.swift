@@ -26,24 +26,25 @@ final class MainLanguageListScreenModuleFactory: LanguageListScreenModuleFactory
         
         // Worker Setup
         let dataStore = LanguageListScreenDataStore()
-        let service = ServiceLayer.shared.translationService
-        let worker = LanguageListScreenWorker(dataStore: dataStore, service: service)
         
         // VIP Cycle Setup
         let presenter = LanguageListScreenPresenter()
-        let interactor = LanguageListScreenInteractor(presenter: presenter, worker: worker)
+        let interactor = LanguageListScreenInteractor(
+            presenter: presenter,
+            dataStore: dataStore)
             
         let languageListManager = MainLanguageListManager()
         let viewController = LanguageListScreenViewController(
             interactor: interactor,
             tableManager: languageListManager)
         presenter.viewController = viewController
-
+        
+        let module = LanguageListScreenModule(
+            viewController: viewController,
+            updater: interactor)
+        
         interactor.moduleOutput = delegate
         
-        return LanguageListScreenModule(
-            viewController: viewController,
-            updater: interactor
-        )
+        return module
     }
 }

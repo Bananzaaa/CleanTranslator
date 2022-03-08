@@ -7,15 +7,15 @@
 
 /// Интерфейс для делегирования обработки событий вне модуля
 protocol LanguageListScreenModuleOutput: AnyObject {
-    func didChooseLanguage(_ languageModelId: String)
+    func changeCurrentLanguage(_ languageCode: String)
 }
 
 /// Интерфейс внешнего обновления модуля
-protocol LanguageListScreenUpdater { }
+protocol LanguageListScreenUpdater {
+    func updateList(_ laguages: [LanguageModel])
+}
 
 protocol LanguageListScreenBusinessLogic {
-    func didLoad()
-    func didRequestChooseLanguage()
     func didRequestSelectLanguage(_ request: LanguageListScreenModels.UpdateLanguageList.Request)
 }
 
@@ -24,7 +24,7 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
     // MARK: - Private properties
     
     private let presenter: LanguageListScreenPresentationLogic
-    private let worker: LanguageListScreenWorkerProtocol
+    private let dataStore: LanguageListScreenDataStoreProtocol
     
     // MARK: - Public properties
 
@@ -34,22 +34,13 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
     
     init(
         presenter: LanguageListScreenPresentationLogic,
-        worker: LanguageListScreenWorkerProtocol) {
+        dataStore: LanguageListScreenDataStoreProtocol) {
         
         self.presenter = presenter
-        self.worker = worker
+        self.dataStore = dataStore
     }
 
     // MARK: - Public Methods
-    
-    func didLoad() {
-        setupScreen()
-        getLanguaheList()
-    }
-    
-    func didRequestChooseLanguage() {
-        moduleOutput?.didChooseLanguage(worker.currentLanguageCode)
-    }
     
     func didRequestSelectLanguage(_ request: LanguageListScreenModels.UpdateLanguageList.Request) {
         handleLanguageChange(request.languageCode)
@@ -57,39 +48,15 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
 
     // MARK: - Private Methods
     
-    private func getLanguaheList() {
-        presenter.showLoading()
-        worker.getLanguageList { [weak self] result in
-            self?.presenter.hideLoading()
-            switch result {
-            case .success(let languages):
-                self?.handleLanguageList(languages)
-            case .failure(let error):
-                self?.handleError(error)
-            }
-        }
-    }
-    
-    private func setupScreen() {
-        presenter.setupScreen()
-    }
-    
-    private func handleLanguageList(_ languages: [LanguageModel]) {
-        presenter.showLanguageList(LanguageListScreenModels.UpdateLanguageList.Response(languages: languages))
-    }
-    
-    private func handleError(_ error: Error) {
-        presenter.showError(LanguageListScreenModels.Error.Response(errorDescription: error.localizedDescription))
-    }
-    
     private func handleLanguageChange(_ languageCode: String) {
-        worker.changeCurrentLanguage(languageCode)
-        presenter.updateScreen(LanguageListScreenModels.UpdateScreen.Response(languageName: worker.currentLanguageName))
+        moduleOutput?.changeCurrentLanguage(languageCode)
     }
 }
 
 // MARK: - LanguageListScreenUpdater
 
 extension LanguageListScreenInteractor: LanguageListScreenUpdater {
-    
+    func updateList(_ laguages: [LanguageModel]) {
+        presenter.showLanguageList(LanguageListScreenModels.UpdateLanguageList.Response(languages: laguages))
+    }
 }

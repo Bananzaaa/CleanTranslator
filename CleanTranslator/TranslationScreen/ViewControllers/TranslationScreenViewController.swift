@@ -52,7 +52,7 @@ final class TranslationScreenViewController: UIViewController, TranslationScreen
     
     func setup(with viewModel: TranslationScreenModels.Setup.ViewModel) {
         title = viewModel.title
-        mainView.setup(with: viewModel)
+        mainView.setup(viewModel)
     }
     
     func showTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel) {

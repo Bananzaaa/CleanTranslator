@@ -1,36 +1,36 @@
-//  LanguageListScreenWorker.swift
+//  ChooseLanguageListScreenWorker.swift
 //  CleanTranslator
 //
-//  Created by Stanislav Anatskii on 20.02.2022.
+//  Created by Stanislav Anatskii on 07.03.2022.
 //  
 //
 
-protocol LanguageListScreenWorkerProtocol {
+protocol ChooseLanguageListScreenWorkerProtocol {
     var currentLanguageCode: String { get }
     var currentLanguageName: String { get }
     func changeCurrentLanguage(_ languageCode: String)
     func getLanguageList(_ completion: @escaping (Result<[LanguageModel], Error>) -> Void)
 }
 
-final class LanguageListScreenWorker: LanguageListScreenWorkerProtocol {
+final class ChooseLanguageListScreenWorker: ChooseLanguageListScreenWorkerProtocol {
 
     // MARK: - Private Properties
     
-    private var dataStore: LanguageListScreenDataStoreProtocol
+    private var dataStore: ChooseLanguageListScreenDataStoreProtocol
     private let service: TranslationService
 
     // MARK: - Init
     
     init(
-        dataStore: LanguageListScreenDataStoreProtocol,
+        dataStore: ChooseLanguageListScreenDataStoreProtocol,
         service: TranslationService) {
         
         self.service = service
         self.dataStore = dataStore
     }
 
-    // MARK: - LanguageListScreenWorkerProtocol
-    
+    // MARK: - ChooseLanguageListScreenWorkerProtocol
+
     var currentLanguageCode: String {
         dataStore.currentLanguageCode
     }

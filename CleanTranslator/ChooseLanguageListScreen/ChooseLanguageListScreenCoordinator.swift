@@ -1,27 +1,27 @@
-//  LanguageListScreenCoordinator.swift
+//  ChooseLanguageListScreenCoordinator.swift
 //  CleanTranslator
 //
-//  Created by Stanislav Anatskii on 20.02.2022.
+//  Created by Stanislav Anatskii on 07.03.2022.
 //  
 //
 
 import UIKit
 
 /// Делегат координатора 
-protocol LanguageListScreenCoordinatorDelegate: AnyObject {
+protocol ChooseLanguageListScreenCoordinatorDelegate: AnyObject {
     func didChooseLanguage(_ languageModelId: String)
 }
 
 /// Координатор
-protocol LanguageListScreenCoordinator: Coordinator {
-    var delegate: LanguageListScreenCoordinatorDelegate? { get set }
+protocol ChooseLanguageListScreenCoordinator: Coordinator {
+    var delegate: ChooseLanguageListScreenCoordinatorDelegate? { get set }
 }
 
-final class MainLanguageListScreenCoordinator: NSObject, LanguageListScreenCoordinator {
+final class MainChooseLanguageListScreenCoordinator: NSObject, ChooseLanguageListScreenCoordinator {
     
     // MARK: - Private properties
     
-    private let moduleFactory: LanguageListScreenModuleFactory
+    private let moduleFactory: ChooseLanguageListScreenModuleFactory
     
     // MARK: - Public properties
 
@@ -30,15 +30,15 @@ final class MainLanguageListScreenCoordinator: NSObject, LanguageListScreenCoord
     var viewController: UIViewController? {
         module?.viewController
     }
-    var module: LanguageListScreenModule?
+    var module: ChooseLanguageListScreenModule?
 
-    weak var delegate: LanguageListScreenCoordinatorDelegate?
+    weak var delegate: ChooseLanguageListScreenCoordinatorDelegate?
     
     // MARK: - Init
     
     init(
         navigationController: UINavigationController,
-        moduleFactory: LanguageListScreenModuleFactory) {
+        moduleFactory: ChooseLanguageListScreenModuleFactory) {
             
         self.navigationController = navigationController
         self.moduleFactory = moduleFactory
@@ -56,7 +56,7 @@ final class MainLanguageListScreenCoordinator: NSObject, LanguageListScreenCoord
     // MARK: - Private Methods
 }
 
-extension MainLanguageListScreenCoordinator: LanguageListScreenModuleOutput {
+extension MainChooseLanguageListScreenCoordinator: ChooseLanguageListScreenModuleOutput {
     func didChooseLanguage(_ languageModelId: String) {
         delegate?.didChooseLanguage(languageModelId)
     }

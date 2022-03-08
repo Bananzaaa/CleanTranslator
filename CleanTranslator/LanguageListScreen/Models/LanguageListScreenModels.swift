@@ -9,27 +9,7 @@ import UIKit
 
 enum LanguageListScreenModels {
     
-    // MARK: - Setup Models
-    
-    enum Setup {
-        struct ViewModel {
-            let title: String
-            let buttonTitle: String
-            let isEnabledNextButton: Bool
-        }
-    }
-    
     // MARK: - Update Models
-    
-    enum UpdateScreen {
-        struct ViewModel {
-            let title: String
-            let isEnabledNextButton: Bool
-        }
-        struct Response {
-            let languageName: String
-        }
-    }
     
     enum UpdateLanguageList {
         struct ViewModel {
@@ -40,12 +20,6 @@ enum LanguageListScreenModels {
         }
         struct Response {
             let languages: [LanguageModel]
-        }
-    }
-    
-    enum Error {
-        struct Response {
-            let errorDescription: String
         }
     }
 }

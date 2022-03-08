@@ -1,5 +1,5 @@
 //
-//  AssemblyContainer.swift
+//  FactoriesAssemblyContainer.swift
 //  CleanTranslator
 //
 //  Created by Stanislav Anatskii on 04.03.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AssemblyContainer {
+final class FactoriesAssemblyContainer {
     private static let container = Container()
     
     enum Factories {

@@ -8,11 +8,7 @@
 import UIKit
 
 protocol LanguageListScreenDisplayLogic: AnyObject {
-    func setupScreen(_ viewModel: LanguageListScreenModels.Setup.ViewModel)
     func setSections(_ viewModel: LanguageListScreenModels.UpdateLanguageList.ViewModel)
-    func updateScreen(_ viewModel: LanguageListScreenModels.UpdateScreen.ViewModel)
-    func showLoading()
-    func hideLoading()
 }
 
 final class LanguageListScreenViewController: UIViewController, LanguageListScreenDisplayLogic {
@@ -51,38 +47,17 @@ final class LanguageListScreenViewController: UIViewController, LanguageListScre
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        interactor.didLoad()
     }
 
     // MARK: - Public Methods
-    
-    func updateScreen(_ viewModel: LanguageListScreenModels.UpdateScreen.ViewModel) {
-        title = viewModel.title
-        mainView.update(with: viewModel)
-    }
-    
-    func setupScreen(_ viewModel: LanguageListScreenModels.Setup.ViewModel) {
-        title = viewModel.title
-        mainView.setup(with: viewModel)
-    }
-    
+
     func setSections(_ viewModel: LanguageListScreenModels.UpdateLanguageList.ViewModel) {
         mainView.setSections(with: viewModel)
-    }
-    
-    func showLoading() {
-        mainView.showLoading()
-    }
-    
-    func hideLoading() {
-        mainView.hideLoading()
-    }
+    }    
 }
 
 extension LanguageListScreenViewController: LanguageListScreenViewDelegate {
-    func nextButtonTapped() {
-        interactor.didRequestChooseLanguage()
-    }
+    
 }
 
 extension LanguageListScreenViewController: LanguageListManagerDelegate {

@@ -8,15 +8,12 @@
 import Foundation
 
 protocol LanguageListScreenDataStoreProtocol {
-    var currentLanguageCode: String { get set }
     var languages: [LanguageModel] { get set }
 }
 
 final class LanguageListScreenDataStore: LanguageListScreenDataStoreProtocol {
     
-    // MARK: - TranslationScreenDataStoreProtocol
-    
-    var currentLanguageCode: String = ""
-    
+    // MARK: - LanguageListScreenDataStoreProtocol
+        
     var languages: [LanguageModel] = []
 }

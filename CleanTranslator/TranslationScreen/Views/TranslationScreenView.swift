@@ -75,7 +75,7 @@ final class TranslationScreenView: UIView {
         translatedLabel.font = viewModel.font
     }
     
-    func setup(with viewModel: TranslationScreenModels.Setup.ViewModel) {
+    func setup(_ viewModel: TranslationScreenModels.Setup.ViewModel) {
         translateButton.setTitle(viewModel.buttonTitle, for: .normal)
     }
 

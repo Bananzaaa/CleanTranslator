@@ -44,10 +44,11 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     }
     
     private func showLanguageListScreen() {
-        let moduleFactory = MainLanguageListScreenModuleFactory()
-        let coordinatorFactory = MainLanguageListScreenCoordinatorFactory(moduleFactory: moduleFactory)
+        let moduleFactory = MainChooseLanguageListScreenModuleFactory(
+            languageListModuleFactory: MainLanguageListScreenModuleFactory())
+        let coordinatorFactory = MainChooseLanguageListScreenCoordinatorFactory(moduleFactory: moduleFactory)
         let coordinator = coordinatorFactory
-            .createLanguageListScreenCoordinator(navigationController: navigationController)
+            .createChooseLanguageListScreenCoordinator(navigationController: navigationController)
         childCoordinators.append(coordinator)
         coordinator.delegate = self
         coordinator.start()
@@ -55,7 +56,7 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     
     private func showTranslationScreen(with dataStore: TranslationScreenDataStoreProtocol) {
         let moduleFactory = MainTranslationScreenModuleFactory(
-            alertFactory: AssemblyContainer.Factories.alertsFactory())
+            alertFactory: FactoriesAssemblyContainer.Factories.alertsFactory())
         let coordinatorFactory = MainTranslationScreenCoordinatorFactory(moduleFactory: moduleFactory)
         let coordinator = coordinatorFactory
             .createTranslationScreenCoordinator(
@@ -66,7 +67,7 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     }
 }
 
-extension MainAppCoordinator: LanguageListScreenCoordinatorDelegate {
+extension MainAppCoordinator: ChooseLanguageListScreenCoordinatorDelegate {
     func didChooseLanguage(_ languageModelId: String) {
         showTranslationScreen(with: TranslationScreenDataStore(fromLanguageId: "en", toLanguageId: languageModelId))
     }
