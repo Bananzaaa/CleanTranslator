@@ -24,7 +24,7 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
     private let worker: TranslationScreenWorkerProtocol
     
     // MARK: - Public properties
-
+    
     weak var moduleOutput: TranslationScreenModuleOutput?
     
     // MARK: - Init
@@ -43,9 +43,9 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
         worker.translate(text: request.textToTranslate) { [weak self] result in
             switch result {
             case .success(let translation):
-                self?.showTranslation(translation)
+                self?.handleTranslation(translation)
             case .failure(let error):
-                self?.showError(error)
+                self?.handleError(error)
             }
         }
     }
@@ -57,13 +57,13 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
 
     // MARK: - Private Methods
     
-    private func showError(_ error: Error) {
+    private func handleError(_ error: Error) {
         presenter.showError(TranslationScreenModels.Error.Response(message: error.localizedDescription))
     }
     
-    private func showTranslation(_ translation: [TranslationModel]) {
-        let plainText = translation.map { $0.text }.joined(separator: " ")
-        presenter.showTranslation(TranslationScreenModels.Update.Response(translatedText: plainText))
+    private func handleTranslation(_ translation: [TranslationModel]) {
+        let translations = translation.map { $0.text }
+        presenter.showTranslation(TranslationScreenModels.Update.Response(translations: translations))
     }
 }
 

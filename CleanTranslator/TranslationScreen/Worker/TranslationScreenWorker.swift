@@ -16,12 +16,6 @@ final class TranslationScreenWorker: TranslationScreenWorkerProtocol {
     
     private let dataStore: TranslationScreenDataStoreProtocol
     private let service: TranslationService
-    
-    // MARK: - Public properties
-    
-    var translationModelId: String {
-        dataStore.modelId
-    }
 
     // MARK: - Init
     
@@ -32,8 +26,12 @@ final class TranslationScreenWorker: TranslationScreenWorkerProtocol {
         self.dataStore = dataStore
         self.service = service
     }
-
-    // MARK: - Public Methods
+    
+    // MARK: - TranslationScreenWorkerProtocol
+    
+    var translationModelId: String {
+        dataStore.modelId
+    }
     
     func translate(text: String, completion: @escaping (Result<[TranslationModel], Error>) -> Void) {
         service.translate(with: TranslationRequestModel(

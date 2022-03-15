@@ -22,8 +22,9 @@ final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
     // MARK: - TranslationScreenPresentationLogic
 
     func showTranslation(_ response: TranslationScreenModels.Update.Response) {
+        let plainText = response.translations.joined(separator: " ")
         let viewModel = TranslationScreenModels.Update.ViewModel(
-            translatedText: response.translatedText,
+            translatedText: plainText,
             font: .systemFont(ofSize: 17, weight: .semibold))
         viewController?.showTranslatedText(viewModel)
     }

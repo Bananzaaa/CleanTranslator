@@ -35,7 +35,7 @@ enum TranslationScreenModels {
         }
         
         struct Response {
-            let translatedText: String
+            let translations: [String]
         }
     }
     
