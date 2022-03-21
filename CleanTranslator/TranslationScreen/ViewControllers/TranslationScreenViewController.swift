@@ -8,9 +8,9 @@
 import UIKit
 
 protocol TranslationScreenDisplayLogic: AnyObject {
-    func setup(with viewModel: TranslationScreenModels.Setup.ViewModel)
-    func showTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel)
-    func showError(_ viewModel: TranslationScreenModels.Error.ViewModel)
+    func displaySetupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel)
+    func displayTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel)
+    func displayError(_ viewModel: TranslationScreenModels.Error.ViewModel)
 }
 
 final class TranslationScreenViewController: UIViewController, TranslationScreenDisplayLogic {
@@ -50,16 +50,16 @@ final class TranslationScreenViewController: UIViewController, TranslationScreen
 
     // MARK: - Public Methods
     
-    func setup(with viewModel: TranslationScreenModels.Setup.ViewModel) {
+    func displaySetupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel) {
         title = viewModel.title
         mainView.setup(viewModel)
     }
     
-    func showTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel) {
+    func displayTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel) {
         mainView.showTranslation(viewModel)
     }
     
-    func showError(_ viewModel: TranslationScreenModels.Error.ViewModel) {
+    func displayError(_ viewModel: TranslationScreenModels.Error.ViewModel) {
         let alert = alertFactory.createErrorAlert(message: viewModel.message)
         present(alert, animated: true, completion: nil)
     }

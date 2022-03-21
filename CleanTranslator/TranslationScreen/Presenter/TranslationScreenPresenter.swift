@@ -8,9 +8,9 @@
 import UIKit
 
 protocol TranslationScreenPresentationLogic: AnyObject {
-    func setupScreen(_ response: TranslationScreenModels.Setup.Response)
-    func showTranslation(_ response: TranslationScreenModels.Update.Response)
-    func showError(_ response: TranslationScreenModels.Error.Response)
+    func presentSetupScreen(_ response: TranslationScreenModels.Setup.Response)
+    func presentTranslation(_ response: TranslationScreenModels.Update.Response)
+    func presentError(_ response: TranslationScreenModels.Error.Response)
 }
 
 final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
@@ -21,23 +21,23 @@ final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
     
     // MARK: - TranslationScreenPresentationLogic
 
-    func showTranslation(_ response: TranslationScreenModels.Update.Response) {
+    func presentTranslation(_ response: TranslationScreenModels.Update.Response) {
         let plainText = response.translations.joined(separator: " ")
         let viewModel = TranslationScreenModels.Update.ViewModel(
             translatedText: plainText,
             font: .systemFont(ofSize: 17, weight: .semibold))
-        viewController?.showTranslatedText(viewModel)
+        viewController?.displayTranslatedText(viewModel)
     }
     
-    func setupScreen(_ response: TranslationScreenModels.Setup.Response) {
+    func presentSetupScreen(_ response: TranslationScreenModels.Setup.Response) {
         let viewModel = TranslationScreenModels.Setup.ViewModel(
             title: response.languageModelId,
             buttonTitle: "Translate, please!")
-        viewController?.setup(with: viewModel)
+        viewController?.displaySetupScreen(with: viewModel)
     }
     
-    func showError(_ response: TranslationScreenModels.Error.Response) {
-        viewController?.showError(TranslationScreenModels.Error.ViewModel(
+    func presentError(_ response: TranslationScreenModels.Error.Response) {
+        viewController?.displayError(TranslationScreenModels.Error.ViewModel(
             message: response.message,
             okButtonTirle: "Ok"))
     }

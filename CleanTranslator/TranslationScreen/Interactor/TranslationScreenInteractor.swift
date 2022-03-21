@@ -51,19 +51,19 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
     }
     
     func didLoad() {
-        presenter.setupScreen(TranslationScreenModels.Setup.Response(
+        presenter.presentSetupScreen(TranslationScreenModels.Setup.Response(
             languageModelId: worker.translationModelId))
     }
 
     // MARK: - Private Methods
     
     private func handleError(_ error: Error) {
-        presenter.showError(TranslationScreenModels.Error.Response(message: error.localizedDescription))
+        presenter.presentError(TranslationScreenModels.Error.Response(message: error.localizedDescription))
     }
     
     private func handleTranslation(_ translation: [TranslationModel]) {
         let translations = translation.map { $0.text }
-        presenter.showTranslation(TranslationScreenModels.Update.Response(translations: translations))
+        presenter.presentTranslation(TranslationScreenModels.Update.Response(translations: translations))
     }
 }
 
