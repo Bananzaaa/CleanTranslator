@@ -23,11 +23,13 @@ final class MainTranslationScreenModuleFactory: TranslationScreenModuleFactory {
     // MARK: - Private properties
     
     private let alertFactory: AlertFactory
+    private let service: TranslationService
     
     // MARK: - Init
     
-    init(alertFactory: AlertFactory) {
+    init(service: TranslationService, alertFactory: AlertFactory) {
         self.alertFactory = alertFactory
+        self.service = service
     }
     
     // MARK: - Public methods
@@ -37,7 +39,6 @@ final class MainTranslationScreenModuleFactory: TranslationScreenModuleFactory {
         moduleOutput delegate: TranslationScreenModuleOutput?) -> TranslationScreenModule {
         
         // Worker Setup
-        let service = ServiceLayer.shared.translationService
         let worker = TranslationScreenWorker(dataStore: dataStore, service: service)
         
         // VIP Cycle Setup

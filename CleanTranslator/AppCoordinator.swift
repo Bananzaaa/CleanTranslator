@@ -45,6 +45,7 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     
     private func showLanguageListScreen() {
         let moduleFactory = MainChooseLanguageListScreenModuleFactory(
+            service: ServicesAssemblyContainer.Services.translationService(),
             languageListModuleFactory: MainLanguageListScreenModuleFactory())
         let coordinatorFactory = MainChooseLanguageListScreenCoordinatorFactory(moduleFactory: moduleFactory)
         let coordinator = coordinatorFactory
@@ -56,6 +57,7 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     
     private func showTranslationScreen(with dataStore: TranslationScreenDataStoreProtocol) {
         let moduleFactory = MainTranslationScreenModuleFactory(
+            service: ServicesAssemblyContainer.Services.translationService(),
             alertFactory: FactoriesAssemblyContainer.Factories.alertsFactory())
         let coordinatorFactory = MainTranslationScreenCoordinatorFactory(moduleFactory: moduleFactory)
         let coordinator = coordinatorFactory

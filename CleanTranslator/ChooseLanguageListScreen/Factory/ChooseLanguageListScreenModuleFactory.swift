@@ -23,11 +23,13 @@ final class MainChooseLanguageListScreenModuleFactory: ChooseLanguageListScreenM
     // MARK: - Private properties
     
     private let languageListModuleFactory: LanguageListScreenModuleFactory
+    private let service: TranslationService
     
     // MARK: - Init
     
-    init(languageListModuleFactory: LanguageListScreenModuleFactory) {
+    init(service: TranslationService, languageListModuleFactory: LanguageListScreenModuleFactory) {
         self.languageListModuleFactory = languageListModuleFactory
+        self.service = service
     }
     
     // MARK: - Public methods
@@ -38,7 +40,6 @@ final class MainChooseLanguageListScreenModuleFactory: ChooseLanguageListScreenM
 
         // Worker Setup
         let dataSource = ChooseLanguageListScreenDataStore()
-        let service = ServicesAssemblyContainer.Services.translationService()
         let worker = ChooseLanguageListScreenWorker(dataStore: dataSource, service: service)
         
         // VIP Cycle Setup
