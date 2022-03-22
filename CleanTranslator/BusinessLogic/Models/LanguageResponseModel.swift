@@ -22,3 +22,41 @@ struct LanguageAPIModel: Codable {
     let supportedAsTarget: Bool
     let identifiable: Bool
 }
+
+extension LanguageResponseModel {
+    static func mock() -> LanguageResponseModel {
+        LanguageResponseModel(
+            languages: [
+                LanguageAPIModel(
+                    language: "ru",
+                    languageName: "russian",
+                    nativeLanguageName: "Русский",
+                    countryCode: "ru",
+                    wordsSeparated: false,
+                    direction: "ltr",
+                    supportedAsSource: false,
+                    supportedAsTarget: false,
+                    identifiable: false),
+                LanguageAPIModel(
+                    language: "en",
+                    languageName: "english",
+                    nativeLanguageName: "English",
+                    countryCode: "en",
+                    wordsSeparated: false,
+                    direction: "ltr",
+                    supportedAsSource: false,
+                    supportedAsTarget: false,
+                    identifiable: false),
+                LanguageAPIModel(
+                    language: "uk",
+                    languageName: "Ukrainian",
+                    nativeLanguageName: "Українська",
+                    countryCode: "uk",
+                    wordsSeparated: false,
+                    direction: "ltr",
+                    supportedAsSource: false,
+                    supportedAsTarget: false,
+                    identifiable: false)
+            ])
+    }
+}

@@ -16,3 +16,12 @@ struct TranslationResponseModel: Codable {
 struct TranslationAPIModel: Codable {
     let translation: String
 }
+
+extension TranslationResponseModel {
+    static func mock() -> TranslationResponseModel {
+        TranslationResponseModel(
+            translations: [TranslationAPIModel(translation: "Ну здрасьте")],
+            wordCount: 1,
+            characterCount: 11)
+    }
+}

@@ -10,8 +10,8 @@ import UIKit
 protocol ChooseLanguageListScreenPresentationLogic: AnyObject {
     func setupScreen()
     func updateScreen(_ response: ChooseLanguageListScreenModels.UpdateScreen.Response)
-    func showError(_ response: ChooseLanguageListScreenModels.Error.Response)
-    func showLoading()
+    func presentError(_ response: ChooseLanguageListScreenModels.Error.Response)
+    func presentLoading()
     func hideLoading()
 }
 
@@ -36,12 +36,14 @@ final class ChooseLanguageListScreenPresenter: ChooseLanguageListScreenPresentat
             isEnabledNextButton: false))
     }
     
-    func showError(_ response: ChooseLanguageListScreenModels.Error.Response) {
-        
+    func presentError(_ response: ChooseLanguageListScreenModels.Error.Response) {
+        viewController?.displayError(ChooseLanguageListScreenModels.Error.ViewModel(
+            message: response.errorDescription,
+            okButtonTirle: "Ok"))
     }
     
-    func showLoading() {
-        viewController?.showLoading()
+    func presentLoading() {
+        viewController?.displayLoading()
     }
     
     func hideLoading() {

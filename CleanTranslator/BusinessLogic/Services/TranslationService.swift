@@ -20,11 +20,24 @@ protocol TranslationService: AnyObject {
 
 final class MainTranslationService: APIService, TranslationService {
     
+    // MARK: - Private properties
+    
+    private var isMockAvailable: Bool {
+        ProcessInfo.processInfo.environment["isMockAvailable"] != nil
+    }
+    
+    // MARK: - TranslationService
+    
     func translate(
         with request: TranslationRequestModel,
         completion: @escaping (Result<TranslationResponseModel, Error>) -> Void) -> Progress {
             
-        apiClient.request(TranslationEndpoint(request: request)) { result in
+        if isMockAvailable {
+            completion(.success(TranslationResponseModel.mock()))
+            return Progress()
+        }
+            
+        return apiClient.request(TranslationEndpoint(request: request)) { result in
             switch result {
             case .success(let content):
                 completion(.success(content))
@@ -37,7 +50,12 @@ final class MainTranslationService: APIService, TranslationService {
     func getLanguageList(
         completion: @escaping (Result<LanguageResponseModel, Error>) -> Void) -> Progress {
             
-        apiClient.request(LanguageListEndpoint()) { result in
+        if isMockAvailable {
+            completion(.success(LanguageResponseModel.mock()))
+            return Progress()
+        }
+            
+        return apiClient.request(LanguageListEndpoint()) { result in
             switch result {
             case .success(let content):
                 completion(.success(content))

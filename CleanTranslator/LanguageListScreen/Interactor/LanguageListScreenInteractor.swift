@@ -57,6 +57,6 @@ final class LanguageListScreenInteractor: LanguageListScreenBusinessLogic {
 
 extension LanguageListScreenInteractor: LanguageListScreenUpdater {
     func updateList(_ laguages: [LanguageModel]) {
-        presenter.showLanguageList(LanguageListScreenModels.UpdateLanguageList.Response(languages: laguages))
+        presenter.presentLanguageList(LanguageListScreenModels.UpdateLanguageList.Response(languages: laguages))
     }
 }

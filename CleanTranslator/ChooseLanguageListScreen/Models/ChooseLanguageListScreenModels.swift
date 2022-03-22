@@ -32,6 +32,10 @@ enum ChooseLanguageListScreenModels {
     }
     
     enum Error {
+        struct ViewModel {
+            let message: String
+            let okButtonTirle: String
+        }
         struct Response {
             let errorDescription: String
         }

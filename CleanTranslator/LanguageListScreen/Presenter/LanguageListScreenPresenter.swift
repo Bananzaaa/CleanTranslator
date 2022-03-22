@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LanguageListScreenPresentationLogic: AnyObject {
-    func showLanguageList(_ response: LanguageListScreenModels.UpdateLanguageList.Response)
+    func presentLanguageList(_ response: LanguageListScreenModels.UpdateLanguageList.Response)
 }
 
 final class LanguageListScreenPresenter: LanguageListScreenPresentationLogic {
@@ -19,7 +19,7 @@ final class LanguageListScreenPresenter: LanguageListScreenPresentationLogic {
     
     // MARK: - LanguageListScreenPresentationLogic
     
-    func showLanguageList(_ response: LanguageListScreenModels.UpdateLanguageList.Response) {
+    func presentLanguageList(_ response: LanguageListScreenModels.UpdateLanguageList.Response) {
         let cellModels = response.languages.map {
             LanguageCellViewModel(name: $0.nativeLanguageName, languageCode: $0.language)
         }
@@ -27,4 +27,6 @@ final class LanguageListScreenPresenter: LanguageListScreenPresentationLogic {
         
         viewController?.setSections(LanguageListScreenModels.UpdateLanguageList.ViewModel(sections: sections))
     }
+    
+    
 }

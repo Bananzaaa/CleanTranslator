@@ -54,7 +54,7 @@ final class ChooseLanguageListScreenInteractor: ChooseLanguageListScreenBusiness
     // MARK: - Private Methods
     
     private func getLanguaheList() {
-        presenter.showLoading()
+        presenter.presentLoading()
         worker.getLanguageList { [weak self] result in
             self?.presenter.hideLoading()
             switch result {
@@ -75,7 +75,7 @@ final class ChooseLanguageListScreenInteractor: ChooseLanguageListScreenBusiness
     }
     
     private func handleError(_ error: Error) {
-        presenter.showError(ChooseLanguageListScreenModels.Error.Response(errorDescription: error.localizedDescription))
+        presenter.presentError(ChooseLanguageListScreenModels.Error.Response(errorDescription: error.localizedDescription))
     }
     
     private func handleLanguageChange(_ languageCode: String) {

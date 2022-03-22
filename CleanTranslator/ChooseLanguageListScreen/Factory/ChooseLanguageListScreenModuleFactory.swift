@@ -24,12 +24,18 @@ final class MainChooseLanguageListScreenModuleFactory: ChooseLanguageListScreenM
     
     private let languageListModuleFactory: LanguageListScreenModuleFactory
     private let service: TranslationService
+    private let alertFactory: AlertFactory
     
     // MARK: - Init
     
-    init(service: TranslationService, languageListModuleFactory: LanguageListScreenModuleFactory) {
+    init(
+        service: TranslationService,
+        languageListModuleFactory: LanguageListScreenModuleFactory,
+        alertFactory: AlertFactory) {
+            
         self.languageListModuleFactory = languageListModuleFactory
         self.service = service
+        self.alertFactory = alertFactory
     }
     
     // MARK: - Public methods
@@ -55,7 +61,8 @@ final class MainChooseLanguageListScreenModuleFactory: ChooseLanguageListScreenM
         
         let viewController = ChooseLanguageListScreenViewController(
             interactor: interactor,
-            contentViewController: languageListModule.viewController)
+            contentViewController: languageListModule.viewController,
+            alertFactory: alertFactory)
         presenter.viewController = viewController
 
         interactor.moduleOutput = delegate

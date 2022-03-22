@@ -10,8 +10,9 @@ import UIKit
 protocol ChooseLanguageListScreenDisplayLogic: AnyObject {
     func setupScreen(_ viewModel: ChooseLanguageListScreenModels.Setup.ViewModel)
     func updateScreen(_ viewModel: ChooseLanguageListScreenModels.UpdateScreen.ViewModel)
-    func showLoading()
+    func displayLoading()
     func hideLoading()
+    func displayError(_ viewModel: ChooseLanguageListScreenModels.Error.ViewModel)
 }
 
 final class ChooseLanguageListScreenViewController: UIViewController, ChooseLanguageListScreenDisplayLogic {
@@ -21,15 +22,18 @@ final class ChooseLanguageListScreenViewController: UIViewController, ChooseLang
     private let interactor: ChooseLanguageListScreenBusinessLogic
     private let mainView: ChooseLanguageListScreenView
     private let contentViewController: UIViewController
+    private let alertFactory: AlertFactory
 
     // MARK: - Init
 
     init(
         interactor: ChooseLanguageListScreenBusinessLogic,
-        contentViewController: UIViewController) {
+        contentViewController: UIViewController,
+        alertFactory: AlertFactory) {
             
         self.interactor = interactor
         self.contentViewController = contentViewController
+        self.alertFactory = alertFactory
         mainView = ChooseLanguageListScreenView()
         
         super.init(nibName: nil, bundle: nil)
@@ -65,12 +69,17 @@ final class ChooseLanguageListScreenViewController: UIViewController, ChooseLang
         mainView.setup(with: viewModel)
     }
     
-    func showLoading() {
+    func displayLoading() {
         mainView.showLoading()
     }
     
     func hideLoading() {
         mainView.hideLoading()
+    }
+    
+    func displayError(_ viewModel: ChooseLanguageListScreenModels.Error.ViewModel) {
+        let alert = alertFactory.createErrorAlert(message: viewModel.message)
+        present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Private Methods

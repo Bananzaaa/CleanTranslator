@@ -46,7 +46,8 @@ final class MainAppCoordinator: NSObject, AppCoordinator {
     private func showLanguageListScreen() {
         let moduleFactory = MainChooseLanguageListScreenModuleFactory(
             service: ServicesAssemblyContainer.Services.translationService(),
-            languageListModuleFactory: MainLanguageListScreenModuleFactory())
+            languageListModuleFactory: MainLanguageListScreenModuleFactory(),
+            alertFactory: FactoriesAssemblyContainer.Factories.alertsFactory())
         let coordinatorFactory = MainChooseLanguageListScreenCoordinatorFactory(moduleFactory: moduleFactory)
         let coordinator = coordinatorFactory
             .createChooseLanguageListScreenCoordinator(navigationController: navigationController)
