@@ -5,8 +5,8 @@ stages:
 build_project:
   stage: build
   script:
-    - xcodebuild clean -workspace ProjectName.xcworkspace -scheme SchemeName | xcpretty
-    - xcodebuild test -workspace ProjectName.xcworkspace -scheme SchemeName -destination 'platform=iOS Simulator,name=iPhone 12 Pro,OS=15.2' | xcpretty -s
+    - xcodebuild clean -workspace CleanTranslator.xcworkspace -scheme CleanTranslator | xcpretty
+    - xcodebuild test -workspace CleanTranslator.xcworkspace -scheme CleanTranslator -destination 'platform=iOS Simulator,name=iPhone 12 Pro,OS=15.2' | xcpretty -s
   tags:
    - ios-tag
    - test-ci
@@ -15,7 +15,7 @@ archive_build:
   stage: archive
   artifacts:
     paths:
-      - build/ProjectName.ipa
+      - build/CleanTranslator.ipa
   script:
     - fastlane beta
   tags:
