@@ -14,6 +14,7 @@ protocol ChooseLanguageListScreenUpdater {
     
 }
 
+//sourcery: AutoMockable
 protocol ChooseLanguageListScreenBusinessLogic {
     func didLoad()
     func didRequestChooseLanguage()

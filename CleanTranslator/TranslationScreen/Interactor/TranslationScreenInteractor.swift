@@ -14,6 +14,12 @@ protocol TranslationScreenUpdater {}
 protocol TranslationScreenBusinessLogic {
     func didRequestTranslate(_ request: TranslationScreenModels.Update.Request)
     func didLoad()
+    
+    // MARK: - Methods for test
+    
+    func simpleMethodThatReturns() -> Int
+    func simpleMethodThatReturns(param: String) -> String
+    func simpleMethodThatReturns(optionalParam: String?) -> String?
 }
 
 final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
@@ -53,6 +59,20 @@ final class TranslationScreenInteractor: TranslationScreenBusinessLogic {
     func didLoad() {
         presenter.presentSetupScreen(TranslationScreenModels.Setup.Response(
             languageModelId: worker.translationModelId))
+    }
+    
+    // MARK: - Methods for test
+    
+    func simpleMethodThatReturns() -> Int {
+        2
+    }
+    
+    func simpleMethodThatReturns(param: String) -> String {
+        ""
+    }
+    
+    func simpleMethodThatReturns(optionalParam: String?) -> String? {
+        nil
     }
 
     // MARK: - Private Methods

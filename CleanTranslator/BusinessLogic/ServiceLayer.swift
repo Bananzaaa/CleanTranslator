@@ -22,7 +22,7 @@ final class ServiceLayer {
     private lazy var interceptor = RequestInterceptor(baseURL: baseUrl, apiKey: creds.apiKey)
     
     // MARK: - Public properties
-    
+        
     private(set) lazy var apiClient: Client = {
         AlamofireClient(
             requestInterceptor: interceptor,

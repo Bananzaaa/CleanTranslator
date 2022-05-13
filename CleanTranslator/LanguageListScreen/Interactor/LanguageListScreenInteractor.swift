@@ -15,6 +15,7 @@ protocol LanguageListScreenUpdater {
     func updateList(_ laguages: [LanguageModel])
 }
 
+//sourcery: AutoMockable
 protocol LanguageListScreenBusinessLogic {
     func didRequestSelectLanguage(_ request: LanguageListScreenModels.UpdateLanguageList.Request)
 }

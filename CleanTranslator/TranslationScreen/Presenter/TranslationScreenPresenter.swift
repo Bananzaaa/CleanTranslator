@@ -7,6 +7,7 @@
 
 import UIKit
 
+//sourcery: AutoMockable
 protocol TranslationScreenPresentationLogic: AnyObject {
     func presentSetupScreen(_ response: TranslationScreenModels.Setup.Response)
     func presentTranslation(_ response: TranslationScreenModels.Update.Response)

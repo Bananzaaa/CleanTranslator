@@ -7,6 +7,7 @@
 
 import UIKit
 
+//sourcery: AutoMockable
 protocol ChooseLanguageListScreenPresentationLogic: AnyObject {
     func setupScreen()
     func updateScreen(_ response: ChooseLanguageListScreenModels.UpdateScreen.Response)

@@ -1,0 +1,38 @@
+sourceryCommand: null
+sourceryTemplate: null
+
+TranslationScreenTests:
+  sources:
+    include:
+    - ./CleanTranslator/TranslationScreen
+  output: ./CleanTranslatorTests/Mocks/TranslationScreenMock.generated.swift
+  targets:
+  - CleanTranslatorTests
+  testable:
+  - CleanTranslator
+  import:
+  - Foundation
+
+LanguageListScreenTests:
+  sources:
+    include:
+    - ./CleanTranslator/LanguageListScreen
+  output: ./CleanTranslatorTests/Mocks/LanguageListScreenMock.generated.swift
+  targets:
+  - CleanTranslatorTests
+  testable:
+  - CleanTranslator
+  import:
+  - Foundation
+
+ChooseLanguageListScreenTests:
+  sources:
+    include:
+    - ./CleanTranslator/ChooseLanguageListScreen
+  output: ./CleanTranslatorTests/Mocks/ChooseLanguageListScreenMock.generated.swift
+  targets:
+  - CleanTranslatorTests
+  testable:
+  - CleanTranslator
+  import:
+  - Foundation

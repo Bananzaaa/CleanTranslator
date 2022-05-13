@@ -5,6 +5,7 @@
 //  
 //
 
+//sourcery: AutoMockable
 protocol TranslationScreenWorkerProtocol {
     var translationModelId: String { get }
     func translate(text: String, completion: @escaping (Result<[TranslationModel], Error>) -> Void)

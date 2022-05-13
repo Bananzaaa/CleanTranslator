@@ -7,6 +7,7 @@
 
 import UIKit
 
+//sourcery: AutoMockable
 protocol TranslationScreenDisplayLogic: AnyObject {
     func displaySetupScreen(with viewModel: TranslationScreenModels.Setup.ViewModel)
     func displayTranslatedText(_ viewModel: TranslationScreenModels.Update.ViewModel)

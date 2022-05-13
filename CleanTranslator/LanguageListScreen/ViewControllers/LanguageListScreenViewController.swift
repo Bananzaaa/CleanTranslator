@@ -7,6 +7,7 @@
 
 import UIKit
 
+//sourcery: AutoMockable
 protocol LanguageListScreenDisplayLogic: AnyObject {
     func setSections(_ viewModel: LanguageListScreenModels.UpdateLanguageList.ViewModel)
 }
