@@ -5,6 +5,7 @@
 //  
 //
 
+//sourcery: AutoMockable
 protocol TranslationScreenDataStoreProtocol {
     var modelId: String { get }
 }

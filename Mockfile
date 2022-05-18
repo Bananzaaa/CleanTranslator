@@ -36,3 +36,16 @@ ChooseLanguageListScreenTests:
   - CleanTranslator
   import:
   - Foundation
+
+TestableObjectMock:
+  sources:
+    include:
+    - ./CleanTranslator/TestProtocols
+  output: ./CleanTranslatorTests/Mocks/TestableObjectMock.generated.swift
+  targets:
+  - CleanTranslatorTests
+  testable:
+  - CleanTranslator
+  import:
+  - Foundation
+  - UIKit

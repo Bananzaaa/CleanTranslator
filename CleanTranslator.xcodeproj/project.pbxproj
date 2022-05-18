@@ -76,6 +76,20 @@
 		8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */; };
 		8CD1CB1F27C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */; };
 		8CD1CB2C27C669BE000E7CC0 /* TranslationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB2B27C669BE000E7CC0 /* TranslationModel.swift */; };
+		8CFB28152833864500F3DBFA /* TestableObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28142833864500F3DBFA /* TestableObjectTests.swift */; };
+		8CFB28182834DD1900F3DBFA /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28172834DD1900F3DBFA /* UserObject.swift */; };
+		8CFB281A2834F52800F3DBFA /* ProtocolWithAssociatedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28192834F52800F3DBFA /* ProtocolWithAssociatedType.swift */; };
+		8CFB281C2834F69300F3DBFA /* ProtocolWithProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB281B2834F69300F3DBFA /* ProtocolWithProperties.swift */; };
+		8CFB281E2834F6B700F3DBFA /* ProtocolsWithSimpleMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB281D2834F6B700F3DBFA /* ProtocolsWithSimpleMethods.swift */; };
+		8CFB28202834F6D500F3DBFA /* ProtocolWithTuples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB281F2834F6D500F3DBFA /* ProtocolWithTuples.swift */; };
+		8CFB28222834F6FA00F3DBFA /* ProtocolWithMethodThatThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28212834F6FA00F3DBFA /* ProtocolWithMethodThatThrows.swift */; };
+		8CFB28242834F73C00F3DBFA /* ProtocolWithCustomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28232834F73C00F3DBFA /* ProtocolWithCustomObject.swift */; };
+		8CFB28262834F75B00F3DBFA /* ProtocolWithStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28252834F75B00F3DBFA /* ProtocolWithStatic.swift */; };
+		8CFB28282834F77900F3DBFA /* ProtocolWithGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28272834F77900F3DBFA /* ProtocolWithGeneric.swift */; };
+		8CFB282A2834F80E00F3DBFA /* TestableObjectMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28292834F80E00F3DBFA /* TestableObjectMock.generated.swift */; };
+		8CFB282C283502F600F3DBFA /* MockStubbingPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */; };
+		8CFB282E2835046A00F3DBFA /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282D2835046A00F3DBFA /* TestError.swift */; };
+		8CFB283028350EC500F3DBFA /* MockSequencingPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +186,20 @@
 		8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenInteractor.swift; sourceTree = "<group>"; };
 		8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenModuleFactory.swift; sourceTree = "<group>"; };
 		8CD1CB2B27C669BE000E7CC0 /* TranslationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationModel.swift; sourceTree = "<group>"; };
+		8CFB28142833864500F3DBFA /* TestableObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableObjectTests.swift; sourceTree = "<group>"; };
+		8CFB28172834DD1900F3DBFA /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		8CFB28192834F52800F3DBFA /* ProtocolWithAssociatedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithAssociatedType.swift; sourceTree = "<group>"; };
+		8CFB281B2834F69300F3DBFA /* ProtocolWithProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithProperties.swift; sourceTree = "<group>"; };
+		8CFB281D2834F6B700F3DBFA /* ProtocolsWithSimpleMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsWithSimpleMethods.swift; sourceTree = "<group>"; };
+		8CFB281F2834F6D500F3DBFA /* ProtocolWithTuples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithTuples.swift; sourceTree = "<group>"; };
+		8CFB28212834F6FA00F3DBFA /* ProtocolWithMethodThatThrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithMethodThatThrows.swift; sourceTree = "<group>"; };
+		8CFB28232834F73C00F3DBFA /* ProtocolWithCustomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithCustomObject.swift; sourceTree = "<group>"; };
+		8CFB28252834F75B00F3DBFA /* ProtocolWithStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithStatic.swift; sourceTree = "<group>"; };
+		8CFB28272834F77900F3DBFA /* ProtocolWithGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithGeneric.swift; sourceTree = "<group>"; };
+		8CFB28292834F80E00F3DBFA /* TestableObjectMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableObjectMock.generated.swift; sourceTree = "<group>"; };
+		8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStubbingPolicyTests.swift; sourceTree = "<group>"; };
+		8CFB282D2835046A00F3DBFA /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSequencingPolicyTests.swift; sourceTree = "<group>"; };
 		94B4C9C428F3899E2FD5B866 /* Pods_CleanTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F29B7C0AFC58393B70E63A /* Pods_CleanTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BA38E42C3AFCEFE6C8E3EE /* Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanTranslator-CleanTranslatorUITests/Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,9 +246,11 @@
 		8C123595282E3EBF00EAD008 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				8CFB28292834F80E00F3DBFA /* TestableObjectMock.generated.swift */,
 				8C123596282E3EBF00EAD008 /* ChooseLanguageListScreenMock.generated.swift */,
 				8C123597282E3EBF00EAD008 /* TranslationScreenMock.generated.swift */,
 				8C123598282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift */,
+				8CFB282D2835046A00F3DBFA /* TestError.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -331,6 +361,7 @@
 				8CB7E2DC27D1E21D002A8B97 /* AlertFactory.swift */,
 				8CB7E2DE27D1E5FC002A8B97 /* FactoriesAssemblyContainer.swift */,
 				8C20D86327D64BED00FD027F /* ServicesAssemblyContainer.swift */,
+				8CFB281128337A6400F3DBFA /* TestProtocols */,
 				8C20D84527D604E200FD027F /* ChooseLanguageListScreen */,
 				8CD1CB0227C4B192000E7CC0 /* LanguageListScreen */,
 				8CD1CAE427C4B181000E7CC0 /* TranslationScreen */,
@@ -348,6 +379,9 @@
 			children = (
 				8C123595282E3EBF00EAD008 /* Mocks */,
 				8C1FA13C27FEC34100672B57 /* TranslationScreenTests.swift */,
+				8CFB28142833864500F3DBFA /* TestableObjectTests.swift */,
+				8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */,
+				8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */,
 			);
 			path = CleanTranslatorTests;
 			sourceTree = "<group>";
@@ -579,6 +613,22 @@
 				8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		8CFB281128337A6400F3DBFA /* TestProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				8CFB28192834F52800F3DBFA /* ProtocolWithAssociatedType.swift */,
+				8CFB281B2834F69300F3DBFA /* ProtocolWithProperties.swift */,
+				8CFB281D2834F6B700F3DBFA /* ProtocolsWithSimpleMethods.swift */,
+				8CFB281F2834F6D500F3DBFA /* ProtocolWithTuples.swift */,
+				8CFB28212834F6FA00F3DBFA /* ProtocolWithMethodThatThrows.swift */,
+				8CFB28232834F73C00F3DBFA /* ProtocolWithCustomObject.swift */,
+				8CFB28252834F75B00F3DBFA /* ProtocolWithStatic.swift */,
+				8CFB28272834F77900F3DBFA /* ProtocolWithGeneric.swift */,
+				8CFB28172834DD1900F3DBFA /* UserObject.swift */,
+			);
+			path = TestProtocols;
 			sourceTree = "<group>";
 		};
 		C75F165E59F77263E38860B7 /* Pods */ = {
@@ -851,6 +901,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFB281E2834F6B700F3DBFA /* ProtocolsWithSimpleMethods.swift in Sources */,
 				8C20D85927D604E200FD027F /* ChooseLanguageListScreenModels.swift in Sources */,
 				8CD1CB1727C4B192000E7CC0 /* LanguageListScreenViewController.swift in Sources */,
 				8CD1CAFC27C4B181000E7CC0 /* TranslationScreenDataStore.swift in Sources */,
@@ -872,13 +923,17 @@
 				8CC5CF7427BAC3E900F60301 /* AppDelegate.swift in Sources */,
 				8CD1C88627C29FE2000E7CC0 /* LanguageResponseModel.swift in Sources */,
 				8CD1C87A27C2915B000E7CC0 /* LanguageListEndpoint.swift in Sources */,
+				8CFB28262834F75B00F3DBFA /* ProtocolWithStatic.swift in Sources */,
+				8CFB281A2834F52800F3DBFA /* ProtocolWithAssociatedType.swift in Sources */,
 				8C20D86027D604E200FD027F /* ChooseLanguageListScreenInteractor.swift in Sources */,
 				8CD1CAF727C4B181000E7CC0 /* TranslationScreenPresenter.swift in Sources */,
 				8CD1CB1F27C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift in Sources */,
 				8C20D85827D604E200FD027F /* ChooseLanguageListScreenPresenter.swift in Sources */,
 				8C20D86427D64BED00FD027F /* ServicesAssemblyContainer.swift in Sources */,
 				8CD1CAFA27C4B181000E7CC0 /* TranslationScreenViewController.swift in Sources */,
+				8CFB28182834DD1900F3DBFA /* UserObject.swift in Sources */,
 				8CB7E08B27CBABE2002A8B97 /* Extensions.swift in Sources */,
+				8CFB28242834F73C00F3DBFA /* ProtocolWithCustomObject.swift in Sources */,
 				8CD1C88F27C2B757000E7CC0 /* Coordinator.swift in Sources */,
 				8CD1CAF927C4B181000E7CC0 /* TranslationScreenCoordinator.swift in Sources */,
 				8CC5CFAA27BAD77B00F60301 /* RequestInterceptor.swift in Sources */,
@@ -899,14 +954,18 @@
 				8CD1CAFB27C4B181000E7CC0 /* TranslationScreenWorker.swift in Sources */,
 				8CD1C87E27C298FE000E7CC0 /* Codable+Extensions.swift in Sources */,
 				8CC5CFA427BACE2A00F60301 /* ServiceLayer.swift in Sources */,
+				8CFB28222834F6FA00F3DBFA /* ProtocolWithMethodThatThrows.swift in Sources */,
 				8CD1C89127C2B821000E7CC0 /* AppCoordinator.swift in Sources */,
 				8CD1C87227C287A0000E7CC0 /* JsonEndpoint.swift in Sources */,
 				8CD1CB1627C4B192000E7CC0 /* LanguageListScreenModels.swift in Sources */,
 				8C20D86227D604E200FD027F /* ChooseLanguageListScreenModuleFactory.swift in Sources */,
 				8CC5CFAC27BADA4300F60301 /* TranslationService.swift in Sources */,
+				8CFB28282834F77900F3DBFA /* ProtocolWithGeneric.swift in Sources */,
 				8CB7E08727C8A96E002A8B97 /* TranslatorCredentials.swift in Sources */,
 				8CD1C88027C299ED000E7CC0 /* DateFormatter+Extensions.swift in Sources */,
 				8C20D86127D604E200FD027F /* ChooseLanguageListScreenCoordinatorFactory.swift in Sources */,
+				8CFB28202834F6D500F3DBFA /* ProtocolWithTuples.swift in Sources */,
+				8CFB281C2834F69300F3DBFA /* ProtocolWithProperties.swift in Sources */,
 				8C20D85C27D604E200FD027F /* ChooseLanguageListScreenDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,10 +974,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CFB28152833864500F3DBFA /* TestableObjectTests.swift in Sources */,
+				8CFB282C283502F600F3DBFA /* MockStubbingPolicyTests.swift in Sources */,
 				8C12359B282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift in Sources */,
 				8C1FA13D27FEC34100672B57 /* TranslationScreenTests.swift in Sources */,
+				8CFB283028350EC500F3DBFA /* MockSequencingPolicyTests.swift in Sources */,
+				8CFB282E2835046A00F3DBFA /* TestError.swift in Sources */,
 				8C12359A282E3EBF00EAD008 /* TranslationScreenMock.generated.swift in Sources */,
 				8C123599282E3EBF00EAD008 /* ChooseLanguageListScreenMock.generated.swift in Sources */,
+				8CFB282A2834F80E00F3DBFA /* TestableObjectMock.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
