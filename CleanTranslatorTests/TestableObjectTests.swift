@@ -5,6 +5,7 @@
 //  Created by Stanislav Anatskii on 17.05.2022.
 //
 
+import Nimble
 import XCTest
 import SwiftyMocky
 @testable import CleanTranslator
@@ -18,7 +19,9 @@ final class TestableObjectTests: XCTestCase {
         Given(mock, .simpleMethodThatReturns(willReturn: 111))
         
         mock.verify(.simpleMethodThatReturns(), count: 0)
-        XCTAssertEqual(mock.simpleMethodThatReturns(), 111)
+        
+        expect(mock.simpleMethodThatReturns()).to(equal(111))
+        
         Verify(mock, 1, .simpleMethodThatReturns())
     }
 
@@ -28,7 +31,9 @@ final class TestableObjectTests: XCTestCase {
         Given(mock, .simpleMethodThatReturns(param: .value(testInput), willReturn: "test_output"))
         
         Verify(mock, 0, .simpleMethodThatReturns(param: .any))
-        XCTAssertEqual(mock.simpleMethodThatReturns(param: testInput), "test_output")
+        
+        expect(mock.simpleMethodThatReturns(param: testInput)).to(equal("test_output"))
+        
         Verify(mock, 1, .simpleMethodThatReturns(param: .any))
         
         _ = mock.simpleMethodThatReturns(param: testInput)
@@ -45,13 +50,14 @@ final class TestableObjectTests: XCTestCase {
         let output = "output"
         
         mock.given(.simpleMethodThatReturns(optionalParam: .value(nil), willReturn: nil))
-        XCTAssertEqual(mock.simpleMethodThatReturns(optionalParam: nil), nil)
+        
+        expect(mock.simpleMethodThatReturns(optionalParam: nil)).to(beNil())
         
         Given(mock, .simpleMethodThatReturns(optionalParam: .value(input), willReturn: output), .drop)
         Given(mock, .simpleMethodThatReturns(optionalParam: nil, willReturn: output), .drop)
         
-        XCTAssertNotNil(mock.simpleMethodThatReturns(optionalParam: nil))
-        XCTAssertEqual(mock.simpleMethodThatReturns(optionalParam: input), output)
+        expect(mock.simpleMethodThatReturns(optionalParam: nil)) != nil
+        expect(mock.simpleMethodThatReturns(optionalParam: input)).to(equal(output))
         
         Verify(mock, .atLeastOnce, .simpleMethodThatReturns(optionalParam: .value(input)))
         Verify(mock, 2, .simpleMethodThatReturns(optionalParam: nil))
@@ -93,7 +99,7 @@ final class TestableObjectTests: XCTestCase {
             stabber.return(5)
         }))
         
-        XCTAssertEqual(mock.methodThatTakesTuple(tuple: ("test", 3)), 5)
+        expect(mock.methodThatTakesTuple(tuple: ("test", 3))).to(equal(5))
         
         Verify(mock, .atLeastOnce, .methodThatTakesTuple(tuple: .any))
     }
@@ -104,7 +110,8 @@ final class TestableObjectTests: XCTestCase {
         let mock = ProtocolWithMethodThatThrowsMock()
         mock.given(.methodThatThrows(willThrow: TestError.unknown))
         
-        XCTAssertThrowsError(try mock.methodThatThrows())
+        expect(try mock.methodThatThrows()).toAlways(throwError(TestError.unknown))
+        
         Verify(mock, .atLeastOnce, .methodThatThrows())
     }
     
@@ -114,9 +121,9 @@ final class TestableObjectTests: XCTestCase {
         mock.given(.methodThatReturnsAndThrows(param: .value(200), willReturn: true))
         mock.given(.methodThatReturnsAndThrows(param: .value(500), willReturn: false))
         
-        XCTAssertEqual(try mock.methodThatReturnsAndThrows(param: 200), true)
-        XCTAssertEqual(try mock.methodThatReturnsAndThrows(param: 500), false)
-        XCTAssertThrowsError(try mock.methodThatReturnsAndThrows(param: 404))
+        expect(try mock.methodThatReturnsAndThrows(param: 200)).to(beTrue())
+        expect(try mock.methodThatReturnsAndThrows(param: 500)).to(beFalse())
+        expect(try mock.methodThatReturnsAndThrows(param: 404)).to(throwError())
         
         Verify(mock, 3, .methodThatReturnsAndThrows(param: .any))
         Verify(mock, 1, .methodThatReturnsAndThrows(param: .value(404)))
@@ -135,17 +142,18 @@ final class TestableObjectTests: XCTestCase {
         }
         Given(mock, .methodThatTakesUser(user: .value(user), willThrow: TestError.unknown))
         
-        XCTAssertThrowsError(try mock.methodThatTakesUser(user: user))
+        expect(try mock.methodThatTakesUser(user: user)).to(throwError(TestError.unknown))
         
         Verify(mock, .atLeastOnce, .methodThatTakesUser(user: .value(user)))
     }
     
     func testMethodThatTakesArrayOfUsers() throws {
         let mock = ProtocolWithCustomObjectMock()
+        let users = [UserObject(name: "Alex", surname: "Ivanov", age: 24)]
         // if UserObject not confirm to Equatable => using .any
         Given(mock, .methodThatTakesArrayOfUsers(array: .any, willReturn: 1))
-        
-        XCTAssertEqual(mock.methodThatTakesArrayOfUsers(array: [UserObject(name: "Alex", surname: "Ivanov", age: 24)]), 1)
+
+        expect(mock.methodThatTakesArrayOfUsers(array: users)).to(beGreaterThan(0))
         
         Verify(mock, 1, .methodThatTakesArrayOfUsers(array: .any([UserObject].self)))
     }

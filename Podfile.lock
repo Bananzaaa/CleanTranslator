@@ -6,6 +6,7 @@ PODS:
     - Alamofire (~> 5.0)
     - Apexy/Core
   - Apexy/Core (1.7.0)
+  - Nimble (10.0.0)
   - SnapKit (5.0.1)
   - Sourcery (1.6.0)
   - SwiftyMocky (4.1.0):
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Apexy
+  - Nimble
   - SnapKit (~> 5.0.0)
   - SwiftyMocky
 
@@ -20,6 +22,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Apexy
+    - Nimble
     - SnapKit
     - Sourcery
     - SwiftyMocky
@@ -27,10 +30,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Apexy: 060236c867d2bcf8b11d761d7dbb9180a7bf9f32
+  Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Sourcery: 744f43178637c79bf23127dfe34e2103b3f28499
   SwiftyMocky: 014739247afadb65efb5bb92ede32c22b9365762
 
-PODFILE CHECKSUM: 0f66ee2553ea422ea534ddf4db4ab8691e5a4298
+PODFILE CHECKSUM: 3b9ce96bfcdf875bec36862be1b222e4783aa127
 
 COCOAPODS: 1.11.2

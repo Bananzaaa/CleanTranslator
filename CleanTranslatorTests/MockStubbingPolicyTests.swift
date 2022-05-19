@@ -5,6 +5,7 @@
 //  Created by Stanislav Anatskii on 18.05.2022.
 //
 
+import Nimble
 import XCTest
 import SwiftyMocky
 
@@ -39,15 +40,15 @@ final class MockStubbingPolicyTests: XCTestCase {
 
         Given(mock, .methodThatThrows(willThrow: TestError.first, TestError.second, TestError.third))
 
-        XCTAssertThrowsError(try mock.methodThatThrows(), error: TestError.first)
-        XCTAssertThrowsError(try mock.methodThatThrows(), error: TestError.second)
-        XCTAssertThrowsError(try mock.methodThatThrows(), error: TestError.third)
-        XCTAssertThrowsError(try mock.methodThatThrows(), error: TestError.first)
-        XCTAssertThrowsError(try mock.methodThatThrows(), error: TestError.second)
-        XCTAssertThrowsError(try mock.methodThatThrows(), error: TestError.third)
-        XCTAssertThrowsError(try mock.methodThatThrows(), of: TestError.self)
-        XCTAssertThrowsError(try mock.methodThatThrows(), of: TestError.self)
-        XCTAssertThrowsError(try mock.methodThatThrows(), of: TestError.self)
+        expect(try mock.methodThatThrows()).to(throwError(TestError.first))
+        expect(try mock.methodThatThrows()).to(throwError(TestError.second))
+        expect(try mock.methodThatThrows()).to(throwError(TestError.third))
+        expect(try mock.methodThatThrows()).to(throwError(TestError.first))
+        expect(try mock.methodThatThrows()).to(throwError(TestError.second))
+        expect(try mock.methodThatThrows()).to(throwError(TestError.third))
+        expect(try mock.methodThatThrows()).to(throwError(errorType: TestError.self))
+        expect(try mock.methodThatThrows()).to(throwError(errorType: TestError.self))
+        expect(try mock.methodThatThrows()).to(throwError(errorType: TestError.self))
     }
 
     func testErrorsAndValuesMix() {
@@ -92,7 +93,7 @@ final class MockStubbingPolicyTests: XCTestCase {
         XCTAssertNoThrow(try mock.methodThatReturnsAndThrows(param: 0))
         XCTAssertNoThrow(try mock.methodThatReturnsAndThrows(param: 1))
         XCTAssertNoThrow(try mock.methodThatReturnsAndThrows(param: 1))
-        XCTAssertNoThrow(try mock.methodThatReturnsAndThrows(param: 1))
+        expect(try mock.methodThatReturnsAndThrows(param: 1)).notTo(throwError())
     }
 
     func testDefaultPolicyWhenSetDrop() {

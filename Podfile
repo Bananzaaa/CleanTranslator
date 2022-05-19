@@ -8,6 +8,7 @@ target 'CleanTranslator' do
     inherit! :search_paths
     
     pod 'SwiftyMocky'
+    pod 'Nimble'
   end
 
   target 'CleanTranslatorUITests' do
