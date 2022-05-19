@@ -10,32 +10,20 @@ import SwiftyMocky
 @testable import CleanTranslator
 
 final class TranslationScreenTests: XCTestCase {
-    
-    enum TestError: Error {
-        case someError
-    }
         
     func testDidLoad() throws {
-        
-        // Given
-        
         let presenter = TranslationScreenPresentationLogicMock()
         let worker = TranslationScreenWorkerProtocolMock()
         Given(worker, .translationModelId(getter: "123"))
-        
-        // When
-        
+                
         let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         interactor.didLoad()
-        
-        // Then
-                        
+                                
         Verify(presenter, .presentSetupScreen(.value(TranslationScreenModels.Setup.Response(languageModelId: "123"))))
         Verify(presenter, 1, .presentSetupScreen(.any))
     }
     
     func testDidRequestTranslateSuccess() throws {
-        
         let presenter = TranslationScreenPresentationLogicMock()
         let worker = TranslationScreenWorkerProtocolMock()
         worker.perform(.translate(text: .any, completion: .any, perform: { text, completion in
@@ -49,12 +37,11 @@ final class TranslationScreenTests: XCTestCase {
     }
     
     func testDidRequestTranslateFailure() throws {
-        
         let presenter = TranslationScreenPresentationLogicMock()
         let worker = TranslationScreenWorkerProtocolMock()
         
         Perform(worker, .translate(text: .any, completion: .any, perform: { text, completion in
-            completion(.failure(TestError.someError))
+            completion(.failure(TestError.unknown))
         }))
         
         let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
