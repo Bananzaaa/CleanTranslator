@@ -42,18 +42,4 @@ final class TranslationScreenPresenter: TranslationScreenPresentationLogic {
             message: response.message,
             okButtonTirle: "Ok"))
     }
-    
-    // MARK: - For tests
-    
-    func simpleMethodThatReturns() {
-        2
-    }
-    
-    func simpleMethodThatReturns(param: String) -> String {
-        ""
-    }
-    
-    func simpleMethodThatReturns(optionalParam: String?) -> String? {
-        nil
-    }
 }

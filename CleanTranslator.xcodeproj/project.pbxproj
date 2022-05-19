@@ -14,7 +14,7 @@
 		8C12359A282E3EBF00EAD008 /* TranslationScreenMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C123597282E3EBF00EAD008 /* TranslationScreenMock.generated.swift */; };
 		8C12359B282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C123598282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift */; };
 		8C1FA13927FEBE9C00672B57 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1FA13827FEBE9C00672B57 /* APIClient.swift */; };
-		8C1FA13D27FEC34100672B57 /* TranslationScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1FA13C27FEC34100672B57 /* TranslationScreenTests.swift */; };
+		8C1FA13D27FEC34100672B57 /* TranslationScreenInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1FA13C27FEC34100672B57 /* TranslationScreenInteractorTests.swift */; };
 		8C20D85827D604E200FD027F /* ChooseLanguageListScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20D84727D604E200FD027F /* ChooseLanguageListScreenPresenter.swift */; };
 		8C20D85927D604E200FD027F /* ChooseLanguageListScreenModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20D84927D604E200FD027F /* ChooseLanguageListScreenModels.swift */; };
 		8C20D85A27D604E200FD027F /* ChooseLanguageListScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C20D84A27D604E200FD027F /* ChooseLanguageListScreenCoordinator.swift */; };
@@ -90,6 +90,7 @@
 		8CFB282C283502F600F3DBFA /* MockStubbingPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */; };
 		8CFB282E2835046A00F3DBFA /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282D2835046A00F3DBFA /* TestError.swift */; };
 		8CFB283028350EC500F3DBFA /* MockSequencingPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */; };
+		8CFB2834283628F400F3DBFA /* TranslationScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB2833283628F400F3DBFA /* TranslationScreenPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +121,7 @@
 		8C123597282E3EBF00EAD008 /* TranslationScreenMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationScreenMock.generated.swift; sourceTree = "<group>"; };
 		8C123598282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenMock.generated.swift; sourceTree = "<group>"; };
 		8C1FA13827FEBE9C00672B57 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		8C1FA13C27FEC34100672B57 /* TranslationScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationScreenTests.swift; sourceTree = "<group>"; };
+		8C1FA13C27FEC34100672B57 /* TranslationScreenInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationScreenInteractorTests.swift; sourceTree = "<group>"; };
 		8C20D84727D604E200FD027F /* ChooseLanguageListScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageListScreenPresenter.swift; sourceTree = "<group>"; };
 		8C20D84927D604E200FD027F /* ChooseLanguageListScreenModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageListScreenModels.swift; sourceTree = "<group>"; };
 		8C20D84A27D604E200FD027F /* ChooseLanguageListScreenCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageListScreenCoordinator.swift; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 		8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStubbingPolicyTests.swift; sourceTree = "<group>"; };
 		8CFB282D2835046A00F3DBFA /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSequencingPolicyTests.swift; sourceTree = "<group>"; };
+		8CFB2833283628F400F3DBFA /* TranslationScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationScreenPresenterTests.swift; sourceTree = "<group>"; };
 		94B4C9C428F3899E2FD5B866 /* Pods_CleanTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F29B7C0AFC58393B70E63A /* Pods_CleanTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BA38E42C3AFCEFE6C8E3EE /* Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanTranslator-CleanTranslatorUITests/Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -378,7 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				8C123595282E3EBF00EAD008 /* Mocks */,
-				8C1FA13C27FEC34100672B57 /* TranslationScreenTests.swift */,
+				8CFB28322836287900F3DBFA /* TranslationScreenTests */,
 				8CFB28142833864500F3DBFA /* TestableObjectTests.swift */,
 				8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */,
 				8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */,
@@ -629,6 +631,15 @@
 				8CFB28172834DD1900F3DBFA /* UserObject.swift */,
 			);
 			path = TestProtocols;
+			sourceTree = "<group>";
+		};
+		8CFB28322836287900F3DBFA /* TranslationScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C1FA13C27FEC34100672B57 /* TranslationScreenInteractorTests.swift */,
+				8CFB2833283628F400F3DBFA /* TranslationScreenPresenterTests.swift */,
+			);
+			path = TranslationScreenTests;
 			sourceTree = "<group>";
 		};
 		C75F165E59F77263E38860B7 /* Pods */ = {
@@ -976,8 +987,9 @@
 			files = (
 				8CFB28152833864500F3DBFA /* TestableObjectTests.swift in Sources */,
 				8CFB282C283502F600F3DBFA /* MockStubbingPolicyTests.swift in Sources */,
+				8CFB2834283628F400F3DBFA /* TranslationScreenPresenterTests.swift in Sources */,
 				8C12359B282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift in Sources */,
-				8C1FA13D27FEC34100672B57 /* TranslationScreenTests.swift in Sources */,
+				8C1FA13D27FEC34100672B57 /* TranslationScreenInteractorTests.swift in Sources */,
 				8CFB283028350EC500F3DBFA /* MockSequencingPolicyTests.swift in Sources */,
 				8CFB282E2835046A00F3DBFA /* TestError.swift in Sources */,
 				8C12359A282E3EBF00EAD008 /* TranslationScreenMock.generated.swift in Sources */,
