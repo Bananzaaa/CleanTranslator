@@ -6,6 +6,8 @@ target 'CleanTranslator' do
 
   target 'CleanTranslatorTests' do
     inherit! :search_paths
+    
+    pod "Cuckoo"
   end
 
   target 'CleanTranslatorUITests' do

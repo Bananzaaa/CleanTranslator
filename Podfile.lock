@@ -6,23 +6,29 @@ PODS:
     - Alamofire (~> 5.0)
     - Apexy/Core
   - Apexy/Core (1.7.0)
+  - Cuckoo (1.7.1):
+    - Cuckoo/Swift (= 1.7.1)
+  - Cuckoo/Swift (1.7.1)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Apexy
+  - Cuckoo
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Apexy
+    - Cuckoo
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Apexy: 060236c867d2bcf8b11d761d7dbb9180a7bf9f32
+  Cuckoo: 9e258d68137c411df47c6390f72901d5276b4f03
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 064be7687b78640672091f694148a1b9f59b95de
+PODFILE CHECKSUM: c128fe274c82b3eb2a228c2214b0968b71d4c096
 
 COCOAPODS: 1.11.2

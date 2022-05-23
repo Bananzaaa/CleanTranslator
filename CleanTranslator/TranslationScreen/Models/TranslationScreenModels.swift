@@ -17,7 +17,7 @@ enum TranslationScreenModels {
             let buttonTitle: String
         }
         
-        struct Response {
+        struct Response: Equatable {
             let languageModelId: String
         }
     }
