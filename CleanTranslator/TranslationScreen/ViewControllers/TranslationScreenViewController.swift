@@ -23,10 +23,14 @@ final class TranslationScreenViewController: UIViewController, TranslationScreen
 
     // MARK: - Init
 
-    init(interactor: TranslationScreenBusinessLogic, alertFactory: AlertFactory) {
+    init(
+        interactor: TranslationScreenBusinessLogic,
+        alertFactory: AlertFactory,
+        mainView: TranslationScreenView = TranslationScreenView()) {
+            
         self.interactor = interactor
         self.alertFactory = alertFactory
-        mainView = TranslationScreenView()
+        self.mainView = mainView
         
         super.init(nibName: nil, bundle: nil)
     }

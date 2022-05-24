@@ -6,23 +6,27 @@ PODS:
     - Alamofire (~> 5.0)
     - Apexy/Core
   - Apexy/Core (1.7.0)
+  - MockingbirdFramework (0.20.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Apexy
+  - MockingbirdFramework (~> 0.20)
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Apexy
+    - MockingbirdFramework
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   Apexy: 060236c867d2bcf8b11d761d7dbb9180a7bf9f32
+  MockingbirdFramework: 54e35fbbb47b806c1a1fae2cf3ef99f6eceb55e5
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 064be7687b78640672091f694148a1b9f59b95de
+PODFILE CHECKSUM: 6e64e90b7da3a62f7ad8c756c32688d0ebd292a0
 
 COCOAPODS: 1.11.2

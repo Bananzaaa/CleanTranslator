@@ -11,7 +11,7 @@ protocol TranslationScreenViewDelegate: AnyObject {
     func translate(text: String)
 }
 
-final class TranslationScreenView: UIView {
+class TranslationScreenView: UIView {
     
     // MARK: - Constants
 

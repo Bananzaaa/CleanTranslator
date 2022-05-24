@@ -6,6 +6,7 @@ target 'CleanTranslator' do
 
   target 'CleanTranslatorTests' do
     inherit! :search_paths
+    pod 'MockingbirdFramework', '~> 0.20'
   end
 
   target 'CleanTranslatorUITests' do

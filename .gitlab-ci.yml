@@ -5,8 +5,9 @@ stages:
 build_project:
   stage: build
   script:
-    - xcodebuild clean -workspace CleanTranslator.xcworkspace -scheme CleanTranslator | xcpretty
-    - xcodebuild test -workspace CleanTranslator.xcworkspace -scheme CleanTranslator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.4' | xcpretty -s
+    bundle exec fastlane test_lane
+    # - xcodebuild clean -workspace CleanTranslator.xcworkspace -scheme CleanTranslator | xcpretty
+    # - xcodebuild test -workspace CleanTranslator.xcworkspace -scheme CleanTranslator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=15.4' | xcpretty -s
   tags:
    - ios-tag
    - test-ci
