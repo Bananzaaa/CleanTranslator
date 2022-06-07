@@ -37,11 +37,11 @@ ChooseLanguageListScreenTests:
   import:
   - Foundation
 
-TestableObjectMock:
+TestProtocolsMock:
   sources:
     include:
     - ./CleanTranslator/TestProtocols
-  output: ./CleanTranslatorTests/Mocks/TestableObjectMock.generated.swift
+  output: ./CleanTranslatorTests/Mocks/TestProtocolsMock.generated.swift
   targets:
   - CleanTranslatorTests
   testable:

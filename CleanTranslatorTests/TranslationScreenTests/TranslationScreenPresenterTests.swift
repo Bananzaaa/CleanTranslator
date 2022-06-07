@@ -11,31 +11,28 @@ import SwiftyMocky
 
 final class TranslationScreenPresenterTests: XCTestCase {
     
-    func testSetupScreen() throws {
-        let viewController = TranslationScreenDisplayLogicMock()
-        let presenter = TranslationScreenPresenter()
+    var viewController: TranslationScreenDisplayLogicMock!
+    var presenter: TranslationScreenPresenter!
+    
+    override func setUpWithError() throws {
+        viewController = TranslationScreenDisplayLogicMock()
+        presenter = TranslationScreenPresenter()
         presenter.viewController = viewController
-        
+    }
+    
+    func testSetupScreen() throws {
         presenter.presentSetupScreen(TranslationScreenModels.Setup.Response(languageModelId: "1"))
         
         Verify(viewController, .once, .displaySetupScreen(with: .any(TranslationScreenModels.Setup.ViewModel.self)))
     }
     
     func testPresentTranslation() throws {
-        let viewController = TranslationScreenDisplayLogicMock()
-        let presenter = TranslationScreenPresenter()
-        presenter.viewController = viewController
-        
         presenter.presentTranslation(TranslationScreenModels.Update.Response(translations: ["test"]))
         
         Verify(viewController, 1, .displayTranslatedText(.any(TranslationScreenModels.Update.ViewModel.self)))
     }
     
     func testPresentError() throws {
-        let viewController = TranslationScreenDisplayLogicMock()
-        let presenter = TranslationScreenPresenter()
-        presenter.viewController = viewController
-        
         presenter.presentError(TranslationScreenModels.Error.Response(message: "error"))
         
         Verify(viewController, .displayError(.any(TranslationScreenModels.Error.ViewModel.self)))

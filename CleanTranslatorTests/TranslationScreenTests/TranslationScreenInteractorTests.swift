@@ -10,12 +10,19 @@ import SwiftyMocky
 @testable import CleanTranslator
 
 final class TranslationScreenInteractorTests: XCTestCase {
+    
+    var presenter: TranslationScreenPresentationLogicMock!
+    var worker: TranslationScreenWorkerProtocolMock!
+    var interactor: TranslationScreenInteractor!
+    
+    override func setUpWithError() throws {
+        presenter = TranslationScreenPresentationLogicMock()
+        worker = TranslationScreenWorkerProtocolMock()
+        interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
+    }
         
     func testDidLoad() throws {
-        let presenter = TranslationScreenPresentationLogicMock()
-        let worker = TranslationScreenWorkerProtocolMock()
         Given(worker, .translationModelId(getter: "123"))
-        let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         
         interactor.didLoad()
                                 
@@ -24,25 +31,20 @@ final class TranslationScreenInteractorTests: XCTestCase {
     }
     
     func testDidRequestTranslateSuccess() throws {
-        let presenter = TranslationScreenPresentationLogicMock()
-        let worker = TranslationScreenWorkerProtocolMock()
         worker.perform(.translate(text: .any, completion: .any, perform: { text, completion in
             completion(.success([TranslationModel(from: TranslationAPIModel(translation: "test"))]))
         }))
-        let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         
         interactor.didRequestTranslate(TranslationScreenModels.Update.Request(textToTranslate: "test"))
         
         presenter.verify(.presentTranslation(.value(TranslationScreenModels.Update.Response(translations: ["test"]))), count: 1)
+        worker.verify(.translate(text: .any, completion: .any), count: .once)
     }
     
     func testDidRequestTranslateFailure() throws {
-        let presenter = TranslationScreenPresentationLogicMock()
-        let worker = TranslationScreenWorkerProtocolMock()
         Perform(worker, .translate(text: .any, completion: .any, perform: { text, completion in
             completion(.failure(TestError.unknown))
         }))
-        let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         
         interactor.didRequestTranslate(TranslationScreenModels.Update.Request(textToTranslate: "test"))
         

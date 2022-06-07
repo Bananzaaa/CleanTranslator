@@ -7,7 +7,6 @@
 
 import Foundation
 
-//sourcery: AutoMockable
 protocol ProtocolWithAssociatedType {
     associatedtype T: Sequence
 

@@ -76,7 +76,7 @@
 		8CD1CB1D27C4B192000E7CC0 /* LanguageListScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */; };
 		8CD1CB1F27C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */; };
 		8CD1CB2C27C669BE000E7CC0 /* TranslationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1CB2B27C669BE000E7CC0 /* TranslationModel.swift */; };
-		8CFB28152833864500F3DBFA /* TestableObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28142833864500F3DBFA /* TestableObjectTests.swift */; };
+		8CFB28152833864500F3DBFA /* TestProtocolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28142833864500F3DBFA /* TestProtocolsTests.swift */; };
 		8CFB28182834DD1900F3DBFA /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28172834DD1900F3DBFA /* UserObject.swift */; };
 		8CFB281A2834F52800F3DBFA /* ProtocolWithAssociatedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28192834F52800F3DBFA /* ProtocolWithAssociatedType.swift */; };
 		8CFB281C2834F69300F3DBFA /* ProtocolWithProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB281B2834F69300F3DBFA /* ProtocolWithProperties.swift */; };
@@ -86,11 +86,11 @@
 		8CFB28242834F73C00F3DBFA /* ProtocolWithCustomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28232834F73C00F3DBFA /* ProtocolWithCustomObject.swift */; };
 		8CFB28262834F75B00F3DBFA /* ProtocolWithStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28252834F75B00F3DBFA /* ProtocolWithStatic.swift */; };
 		8CFB28282834F77900F3DBFA /* ProtocolWithGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28272834F77900F3DBFA /* ProtocolWithGeneric.swift */; };
-		8CFB282A2834F80E00F3DBFA /* TestableObjectMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28292834F80E00F3DBFA /* TestableObjectMock.generated.swift */; };
 		8CFB282C283502F600F3DBFA /* MockStubbingPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */; };
 		8CFB282E2835046A00F3DBFA /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282D2835046A00F3DBFA /* TestError.swift */; };
 		8CFB283028350EC500F3DBFA /* MockSequencingPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */; };
 		8CFB2834283628F400F3DBFA /* TranslationScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB2833283628F400F3DBFA /* TranslationScreenPresenterTests.swift */; };
+		8CFB28EB283D298F003F7ABB /* TestProtocolsMock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFB28EA283D298F003F7ABB /* TestProtocolsMock.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,7 +187,7 @@
 		8CD1CB1127C4B192000E7CC0 /* LanguageListScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenInteractor.swift; sourceTree = "<group>"; };
 		8CD1CB1427C4B192000E7CC0 /* LanguageListScreenModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageListScreenModuleFactory.swift; sourceTree = "<group>"; };
 		8CD1CB2B27C669BE000E7CC0 /* TranslationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationModel.swift; sourceTree = "<group>"; };
-		8CFB28142833864500F3DBFA /* TestableObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableObjectTests.swift; sourceTree = "<group>"; };
+		8CFB28142833864500F3DBFA /* TestProtocolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProtocolsTests.swift; sourceTree = "<group>"; };
 		8CFB28172834DD1900F3DBFA /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		8CFB28192834F52800F3DBFA /* ProtocolWithAssociatedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithAssociatedType.swift; sourceTree = "<group>"; };
 		8CFB281B2834F69300F3DBFA /* ProtocolWithProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithProperties.swift; sourceTree = "<group>"; };
@@ -197,11 +197,11 @@
 		8CFB28232834F73C00F3DBFA /* ProtocolWithCustomObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithCustomObject.swift; sourceTree = "<group>"; };
 		8CFB28252834F75B00F3DBFA /* ProtocolWithStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithStatic.swift; sourceTree = "<group>"; };
 		8CFB28272834F77900F3DBFA /* ProtocolWithGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWithGeneric.swift; sourceTree = "<group>"; };
-		8CFB28292834F80E00F3DBFA /* TestableObjectMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableObjectMock.generated.swift; sourceTree = "<group>"; };
 		8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStubbingPolicyTests.swift; sourceTree = "<group>"; };
 		8CFB282D2835046A00F3DBFA /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSequencingPolicyTests.swift; sourceTree = "<group>"; };
 		8CFB2833283628F400F3DBFA /* TranslationScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationScreenPresenterTests.swift; sourceTree = "<group>"; };
+		8CFB28EA283D298F003F7ABB /* TestProtocolsMock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestProtocolsMock.generated.swift; sourceTree = "<group>"; };
 		94B4C9C428F3899E2FD5B866 /* Pods_CleanTranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F29B7C0AFC58393B70E63A /* Pods_CleanTranslator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanTranslator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BA38E42C3AFCEFE6C8E3EE /* Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig"; path = "Target Support Files/Pods-CleanTranslator-CleanTranslatorUITests/Pods-CleanTranslator-CleanTranslatorUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		8C123595282E3EBF00EAD008 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				8CFB28292834F80E00F3DBFA /* TestableObjectMock.generated.swift */,
+				8CFB28EA283D298F003F7ABB /* TestProtocolsMock.generated.swift */,
 				8C123596282E3EBF00EAD008 /* ChooseLanguageListScreenMock.generated.swift */,
 				8C123597282E3EBF00EAD008 /* TranslationScreenMock.generated.swift */,
 				8C123598282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift */,
@@ -381,7 +381,7 @@
 			children = (
 				8C123595282E3EBF00EAD008 /* Mocks */,
 				8CFB28322836287900F3DBFA /* TranslationScreenTests */,
-				8CFB28142833864500F3DBFA /* TestableObjectTests.swift */,
+				8CFB28142833864500F3DBFA /* TestProtocolsTests.swift */,
 				8CFB282B283502F600F3DBFA /* MockStubbingPolicyTests.swift */,
 				8CFB282F28350EC500F3DBFA /* MockSequencingPolicyTests.swift */,
 			);
@@ -686,6 +686,7 @@
 				8CC5CF8327BAC3EB00F60301 /* Frameworks */,
 				8CC5CF8427BAC3EB00F60301 /* Resources */,
 				CA24A14956C67B3ED802CC3A /* [CP] Embed Pods Frameworks */,
+				8CFB28E9283D28DC003F7ABB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -871,6 +872,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CleanTranslator/Pods-CleanTranslator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8CFB28E9283D28DC003F7ABB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$PODS_ROOT/SwiftyMocky/bin/swiftymocky generate\n";
+		};
 		CA24A14956C67B3ED802CC3A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -985,7 +1003,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CFB28152833864500F3DBFA /* TestableObjectTests.swift in Sources */,
+				8CFB28EB283D298F003F7ABB /* TestProtocolsMock.generated.swift in Sources */,
+				8CFB28152833864500F3DBFA /* TestProtocolsTests.swift in Sources */,
 				8CFB282C283502F600F3DBFA /* MockStubbingPolicyTests.swift in Sources */,
 				8CFB2834283628F400F3DBFA /* TranslationScreenPresenterTests.swift in Sources */,
 				8C12359B282E3EBF00EAD008 /* LanguageListScreenMock.generated.swift in Sources */,
@@ -994,7 +1013,6 @@
 				8CFB282E2835046A00F3DBFA /* TestError.swift in Sources */,
 				8C12359A282E3EBF00EAD008 /* TranslationScreenMock.generated.swift in Sources */,
 				8C123599282E3EBF00EAD008 /* ChooseLanguageListScreenMock.generated.swift in Sources */,
-				8CFB282A2834F80E00F3DBFA /* TestableObjectMock.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
