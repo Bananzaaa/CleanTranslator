@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/Interactor/TranslationScreenInteractor.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/Interactor/TranslationScreenInteractor.swift at 2022-07-03 15:01:34 +0000
 
 //  TranslationScreenInteractor.swift
 //  CleanTranslator
@@ -259,7 +259,7 @@ import Cuckoo
 }
 
 
-// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/Presenter/TranslationScreenPresenter.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/Presenter/TranslationScreenPresenter.swift at 2022-07-03 15:01:34 +0000
 
 //  TranslationScreenPresenter.swift
 //  CleanTranslator
@@ -430,7 +430,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/ViewControllers/TranslationScreenViewController.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/ViewControllers/TranslationScreenViewController.swift at 2022-07-03 15:01:34 +0000
 
 //  TranslationScreenViewController.swift
 //  CleanTranslator
@@ -601,7 +601,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/Worker/TranslationScreenWorker.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/TranslationScreen/Worker/TranslationScreenWorker.swift at 2022-07-03 15:01:34 +0000
 
 //  TranslationScreenWorker.swift
 //  CleanTranslator

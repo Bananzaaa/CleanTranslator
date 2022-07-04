@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/Interactor/ChooseLanguageListScreenInteractor.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/Interactor/ChooseLanguageListScreenInteractor.swift at 2022-07-03 15:01:34 +0000
 
 //  ChooseLanguageListScreenInteractor.swift
 //  CleanTranslator
@@ -291,7 +291,7 @@ import Cuckoo
 }
 
 
-// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/Presenter/ChooseLanguageListScreenPresenter.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/Presenter/ChooseLanguageListScreenPresenter.swift at 2022-07-03 15:01:34 +0000
 
 //  ChooseLanguageListScreenPresenter.swift
 //  CleanTranslator
@@ -526,7 +526,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/ViewControllers/ChooseLanguageListScreenViewController.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/ViewControllers/ChooseLanguageListScreenViewController.swift at 2022-07-03 15:01:34 +0000
 
 //  ChooseLanguageListScreenViewController.swift
 //  CleanTranslator
@@ -761,7 +761,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/Worker/ChooseLanguageListScreenWorker.swift at 2022-05-20 11:23:44 +0000
+// MARK: - Mocks generated from file: CleanTranslator/ChooseLanguageListScreen/Worker/ChooseLanguageListScreenWorker.swift at 2022-07-03 15:01:34 +0000
 
 //  ChooseLanguageListScreenWorker.swift
 //  CleanTranslator

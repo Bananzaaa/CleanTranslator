@@ -19,10 +19,12 @@ class CleanTranslatorInteractorTests: XCTestCase {
         let worker = MockTranslationScreenWorkerProtocol()
         let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         stub(worker) { mock in
-            when(mock).translationModelId.get.thenReturn("123")
+            when(mock).translationModelId.get
+                .thenReturn("123")
         }
         stub(presenter) { mock in
-            when(mock).presentSetupScreen(any()).thenDoNothing()
+            when(mock).presentSetupScreen(any())
+                .thenDoNothing()
         }
         
         // When
@@ -41,12 +43,14 @@ class CleanTranslatorInteractorTests: XCTestCase {
         let worker = MockTranslationScreenWorkerProtocol()
         let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         stub(worker) { mock in
-            when(mock).translate(text: equal(to: "test"), completion: any()).then { text, completion in
-                completion(.success([TranslationModel(from: TranslationAPIModel(translation: "text"))]))
+            when(mock).translate(text: equal(to: "test"), completion: any())
+                .then { text, completion in
+                    completion(.success([TranslationModel(from: TranslationAPIModel(translation: "text"))]))
             }
         }
         stub(presenter) { mock in
-            when(mock).presentTranslation(any()).thenDoNothing()
+            when(mock).presentTranslation(any())
+                .thenDoNothing()
         }
         
         interactor.didRequestTranslate(TranslationScreenModels.Update.Request(textToTranslate: "test"))
@@ -62,13 +66,15 @@ class CleanTranslatorInteractorTests: XCTestCase {
         let interactor = TranslationScreenInteractor(presenter: presenter, worker: worker)
         
         stub(worker) { mock in
-            when(mock).translate(text: equal(to: "111"), completion: any()).then { text, completion in
+            when(mock).translate(text: equal(to: "111"), completion: any())
+                .then { text, completion in
                 completion(.failure(TestError.unknown))
             }
         }
         
         stub(presenter) { mock in
-            when(mock).presentError(any()).thenDoNothing()
+            when(mock).presentError(any())
+                .thenDoNothing()
         }
         
         interactor.didRequestTranslate(TranslationScreenModels.Update.Request(textToTranslate: "111"))

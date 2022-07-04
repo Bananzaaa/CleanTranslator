@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: CleanTranslator/ProtocolWithAssociatedType.swift at 2022-05-20 11:23:45 +0000
+// MARK: - Mocks generated from file: CleanTranslator/ProtocolWithAssociatedType.swift at 2022-07-03 15:01:34 +0000
 
 //
 //  ProtocolWithAssociatedType.swift
